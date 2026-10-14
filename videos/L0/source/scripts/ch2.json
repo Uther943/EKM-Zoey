@@ -1,0 +1,42 @@
+{
+  "section": "ch2",
+  "voice": "en-US-AriaNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 2 · What Knowledge Management Means at Lenovo"
+    },
+    {
+      "id": "S1",
+      "title": "More Than a Process"
+    },
+    {
+      "id": "S2",
+      "title": "An AI-Ready Ecosystem"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "At Lenovo, Enterprise Knowledge Management is more than an activity or process.",
+      "zh": "在联想，企业知识管理不只是一项活动或流程。"
+    },
+    {
+      "slide": "S1",
+      "en": "It is a strategic enterprise initiative | focused on transforming Lenovo into a leading Knowledge and AI-driven organization.",
+      "zh": "它是一项企业级战略举措，| 致力于将联想转型为领先的知识与 AI 驱动型组织。",
+      "hold": {
+        "after": "organization",
+        "seconds": 2.0
+      }
+    },
+    {
+      "slide": "S2",
+      "en": "Our goal is to create a trusted, scalable, and AI-ready knowledge ecosystem | that connects people, content, and intelligence across the enterprise.",
+      "zh": "我们的目标是打造一个可信、可扩展、AI 就绪的知识生态系统，| 在整个企业中连接人员、内容与智能。"
+    }
+  ],
+  "source_text": "At Lenovo, Enterprise Knowledge Management is more than an activity or process. It is a strategic enterprise initiative focused on transforming Lenovo into a leading Knowledge and AI-driven organization. Our goal is to create a trusted, scalable, and AI-ready knowledge ecosystem that connects people, content, and intelligence across the enterprise."
+}

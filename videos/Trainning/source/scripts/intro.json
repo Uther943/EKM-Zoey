@@ -1,0 +1,22 @@
+{
+  "section": "intro",
+  "voice": "en-US-GuyNeural",
+  "rate": "-4%",
+  "title_card_seconds": 4.0,
+  "slides": [
+    {"id": "S0", "title": "From Code to Video"},
+    {"id": "S1", "title": "Built with Code"},
+    {"id": "S2", "title": "Five Simple Steps"}
+  ],
+  "units": [
+    {"slide": "S1", "en": "The video you are watching was not filmed or edited by hand.", "zh": "你正在看的这个视频，不是拍出来的，也不是手工剪出来的。"},
+    {"slide": "S1", "en": "It was built with code.", "zh": "它是用代码做出来的。", "hold": {"after": "code", "seconds": 1.0}},
+    {"slide": "S2", "en": "It takes five simple steps:", "zh": "只需要五个简单步骤："},
+    {"slide": "S2", "list": true, "en": "write the script,", "zh": "写文稿，"},
+    {"slide": "S2", "list": true, "en": "turn it into a voice,", "zh": "把它变成配音，"},
+    {"slide": "S2", "list": true, "en": "draw each scene as a web page,", "zh": "把每个画面做成网页，"},
+    {"slide": "S2", "list": true, "en": "take a picture of every frame,", "zh": "给每一帧拍一张照片，"},
+    {"slide": "S2", "list": true, "en": "and join everything into one film.", "zh": "再把所有内容拼成一部完整的影片。", "hold": {"after": "film", "seconds": 1.5}}
+  ],
+  "source_text": "The video you are watching was not filmed or edited by hand. It was built with code. It takes five simple steps: write the script, turn it into a voice, draw each scene as a web page, take a picture of every frame, and join everything into one film."
+}

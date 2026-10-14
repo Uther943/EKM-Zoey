@@ -1,0 +1,336 @@
+{
+  "section": "ch5",
+  "duration": 30.925,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 5 · Powering AI at Lenovo",
+      "start": 0.0,
+      "end": 3.5
+    },
+    {
+      "id": "S1",
+      "title": "An AI-Ready Asset",
+      "start": 3.5,
+      "end": 15.273
+    },
+    {
+      "id": "S2",
+      "title": "A More Connected Organization",
+      "start": 15.273,
+      "end": 30.925
+    }
+  ],
+  "units": [
+    {
+      "i": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 13.856,
+      "en": "By turning our trusted knowledge into an AI-ready asset, we put the right information in the hands of every employee — and every AI Agent — exactly when it's needed.",
+      "zh": "通过把可信知识转化为 AI 就绪的资产，我们把正确的信息交到每一位员工手中——也交给每一个 AI 智能体——在需要的时候恰好送达。",
+      "words": [
+        [
+          4.0,
+          "By"
+        ],
+        [
+          4.145,
+          "turning"
+        ],
+        [
+          4.575,
+          "our"
+        ],
+        [
+          4.692,
+          "trusted"
+        ],
+        [
+          5.174,
+          "knowledge"
+        ],
+        [
+          5.617,
+          "into"
+        ],
+        [
+          5.851,
+          "an"
+        ],
+        [
+          6.059,
+          "AI-ready"
+        ],
+        [
+          6.684,
+          "asset"
+        ],
+        [
+          7.479,
+          "we"
+        ],
+        [
+          7.622,
+          "put"
+        ],
+        [
+          7.856,
+          "the"
+        ],
+        [
+          7.96,
+          "right"
+        ],
+        [
+          8.221,
+          "information"
+        ],
+        [
+          8.872,
+          "in"
+        ],
+        [
+          8.963,
+          "the"
+        ],
+        [
+          9.041,
+          "hands"
+        ],
+        [
+          9.445,
+          "of"
+        ],
+        [
+          9.536,
+          "every"
+        ],
+        [
+          9.822,
+          "employee"
+        ],
+        [
+          10.734,
+          "and"
+        ],
+        [
+          10.968,
+          "every"
+        ],
+        [
+          11.32,
+          "AI"
+        ],
+        [
+          11.723,
+          "Agent"
+        ],
+        [
+          12.401,
+          "exactly"
+        ],
+        [
+          12.947,
+          "when"
+        ],
+        [
+          13.117,
+          "it's"
+        ],
+        [
+          13.273,
+          "needed"
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "slide": "S2",
+      "start": 15.773,
+      "end": 23.335,
+      "en": "Together, we're building a smarter, more connected organization where knowledge flows freely and intelligent decisions happen faster.",
+      "zh": "我们正携手打造一个更智能、联系更紧密的组织，让知识自由流动，让明智的决策更快发生。",
+      "words": [
+        [
+          15.773,
+          "Together"
+        ],
+        [
+          16.519,
+          "we're"
+        ],
+        [
+          16.689,
+          "building"
+        ],
+        [
+          17.04,
+          "a"
+        ],
+        [
+          17.118,
+          "smarter"
+        ],
+        [
+          17.874,
+          "more"
+        ],
+        [
+          18.056,
+          "connected"
+        ],
+        [
+          18.538,
+          "organization"
+        ],
+        [
+          19.358,
+          "where"
+        ],
+        [
+          19.514,
+          "knowledge"
+        ],
+        [
+          19.983,
+          "flows"
+        ],
+        [
+          20.387,
+          "freely"
+        ],
+        [
+          20.868,
+          "and"
+        ],
+        [
+          21.025,
+          "intelligent"
+        ],
+        [
+          21.663,
+          "decisions"
+        ],
+        [
+          22.236,
+          "happen"
+        ],
+        [
+          22.6,
+          "faster"
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "slide": "S2",
+      "start": 23.785,
+      "end": 27.687,
+      "en": "Let's make Lenovo the model for a Knowledge + AI-Driven future.",
+      "zh": "让我们把联想打造成知识 + AI 驱动未来的典范。",
+      "words": [
+        [
+          23.785,
+          "Let's"
+        ],
+        [
+          24.082,
+          "make"
+        ],
+        [
+          24.33,
+          "Lenovo"
+        ],
+        [
+          24.812,
+          "the"
+        ],
+        [
+          24.916,
+          "model"
+        ],
+        [
+          25.306,
+          "for"
+        ],
+        [
+          25.502,
+          "a"
+        ],
+        [
+          25.554,
+          "Knowledge"
+        ],
+        [
+          26.048,
+          "+"
+        ],
+        [
+          26.374,
+          "AI-Driven"
+        ],
+        [
+          27.025,
+          "future"
+        ]
+      ]
+    }
+  ],
+  "subs": [
+    {
+      "i": 0,
+      "unit": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 7.479,
+      "en": "By turning our trusted knowledge into an AI-ready asset,",
+      "zh": "通过把可信知识转化为 AI 就绪的资产，"
+    },
+    {
+      "i": 1,
+      "unit": 0,
+      "slide": "S1",
+      "start": 7.479,
+      "end": 10.734,
+      "en": "we put the right information in the hands of every employee —",
+      "zh": "我们把正确的信息交到每一位员工手中——"
+    },
+    {
+      "i": 2,
+      "unit": 0,
+      "slide": "S1",
+      "start": 10.734,
+      "end": 13.856,
+      "en": "and every AI Agent — exactly when it's needed.",
+      "zh": "也交给每一个 AI 智能体——在需要的时候恰好送达。"
+    },
+    {
+      "i": 3,
+      "unit": 1,
+      "slide": "S2",
+      "start": 15.773,
+      "end": 19.358,
+      "en": "Together, we're building a smarter, more connected organization",
+      "zh": "我们正携手打造一个更智能、联系更紧密的组织，"
+    },
+    {
+      "i": 4,
+      "unit": 1,
+      "slide": "S2",
+      "start": 19.358,
+      "end": 23.335,
+      "en": "where knowledge flows freely and intelligent decisions happen faster.",
+      "zh": "让知识自由流动，让明智的决策更快发生。"
+    },
+    {
+      "i": 5,
+      "unit": 2,
+      "slide": "S2",
+      "start": 23.785,
+      "end": 27.687,
+      "en": "Let's make Lenovo the model for a Knowledge + AI-Driven future.",
+      "zh": "让我们把联想打造成知识 + AI 驱动未来的典范。"
+    }
+  ]
+}

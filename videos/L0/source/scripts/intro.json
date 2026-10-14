@@ -1,0 +1,41 @@
+{
+  "section": "intro",
+  "voice": "en-US-AriaNeural",
+  "rate": "-4%",
+  "title_card_seconds": 4.0,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "Lenovo EKM"
+    },
+    {
+      "id": "S1",
+      "title": "Knowledge We Create Every Day"
+    },
+    {
+      "id": "S2",
+      "title": "Knowledge Is Everywhere"
+    },
+    {
+      "id": "S3",
+      "title": "KM Serves Both Employees and AI"
+    }
+  ],
+  "units": [
+    {"slide": "S1", "en": "Every day, Lenovo employees create valuable knowledge.", "zh": "每天，联想员工都在创造宝贵的知识。"},
+    {"slide": "S1", "list": true, "en": "We document best practices.", "zh": "我们记录最佳实践。"},
+    {"slide": "S1", "list": true, "en": "We solve customer problems.", "zh": "我们解决客户问题。"},
+    {"slide": "S1", "list": true, "en": "We develop products.", "zh": "我们开发产品。"},
+    {"slide": "S1", "list": true, "en": "We create presentations, reports, training materials, and operational processes.", "zh": "我们制作演示文稿、报告、培训材料和运营流程。"},
+    {"slide": "S2", "en": "But there is one challenge we all face:", "zh": "但我们都面临着一个挑战："},
+    {"slide": "S2", "en": "Knowledge is everywhere.", "zh": "知识无处不在。"},
+    {"slide": "S2", "en": "It lives in emails, shared drives, SharePoint sites, Teams channels, documents, videos,", "zh": "它存在于电子邮件、共享驱动器、SharePoint 站点、Teams 频道、文档和视频中，"},
+    {"slide": "S2", "list": true, "en": "and sometimes only in people's heads.", "zh": "有时甚至只存在于人们的脑海里。"},
+    {"slide": "S3", "en": "Knowledge Management turns knowledge into a shared, trusted enterprise asset | breaking it out of silos to serve employees through faster access and smarter decisions, | while providing the governed foundation that powers enterprise AI.", "zh": "知识管理将知识转化为共享、可信的企业资产，| 打破孤岛，以更快的获取和更明智的决策服务员工，| 同时提供受治理的基础，为企业 AI 赋能。", "hold": {"after": "AI", "seconds": 2.0}},
+    {"slide": "S3", "en": "When knowledge is scattered, difficult to find, and hard to maintain,", "zh": "当知识分散、难以查找且难以维护时，"},
+    {"slide": "S3", "list": true, "en": "employees spend too much time searching for information instead of using it.", "zh": "员工便会花太多时间寻找信息，而不是使用信息。"},
+    {"slide": "S3", "en": "And as AI agents consume knowledge at scale,", "zh": "随着 AI 智能体大规模地使用知识，"},
+    {"slide": "S3", "list": true, "en": "it must be governed to ensure high quality and accessibility.", "zh": "知识必须经过治理，以确保高质量与可获取性。"}
+  ],
+  "source_text": "Every day, Lenovo employees create valuable knowledge. We document best practices. We solve customer problems. We develop products. We create presentations, reports, training materials, and operational processes. But there is one challenge we all face: Knowledge is everywhere. It lives in emails, shared drives, SharePoint sites, Teams channels, documents, videos, and sometimes only in people's heads. Knowledge Management turns knowledge into a shared, trusted enterprise asset breaking it out of silos to serve employees through faster access and smarter decisions, while providing the governed foundation that powers enterprise AI. When knowledge is scattered, difficult to find, and hard to maintain, employees spend too much time searching for information instead of using it. And as AI agents consume knowledge at scale, it must be governed to ensure high quality and accessibility."
+}

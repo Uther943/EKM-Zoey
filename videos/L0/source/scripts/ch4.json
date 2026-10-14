@@ -1,0 +1,67 @@
+{
+  "section": "ch4",
+  "voice": "en-US-AriaNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 4 · Lenovo EKM Framework"
+    },
+    {
+      "id": "S1",
+      "title": "Knowledge as a Strategic Asset"
+    },
+    {
+      "id": "S2",
+      "title": "Three Change Pillars"
+    },
+    {
+      "id": "S3",
+      "title": "A Foundation That Scales"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "Transform Lenovo into a leading Knowledge + AI-Driven Organization | by treating trusted knowledge as a strategic asset | people and AI continuously create, share, and reuse it.",
+      "zh": "将联想转型为领先的知识 + AI 驱动型组织，| 把可信知识视为一项战略资产，| 让人与 AI 持续地创建、共享和复用知识。",
+      "pause_after": 1.5
+    },
+    {
+      "slide": "S2",
+      "en": "Apply into synergistic Change Pillars:",
+      "zh": "落实到相互协同的变革支柱中："
+    },
+    {
+      "slide": "S2",
+      "en": "Organization: establish dedicated KM Specialist roles | to govern domain knowledge.",
+      "zh": "组织：设立专职的 KM 专员岗位，| 负责治理各领域的知识。"
+    },
+    {
+      "slide": "S2",
+      "en": "Processes: standardize workflows | for knowledge preparation, knowledge lifecycle, and knowledge operation.",
+      "zh": "流程：将工作流程标准化，| 涵盖知识准备、知识生命周期与知识运营。"
+    },
+    {
+      "slide": "S2",
+      "en": "Knowledge platform (EKP): Lenovo's governed knowledge foundation.",
+      "zh": "知识平台（EKP）：联想受治理的知识基础。"
+    },
+    {
+      "slide": "S2",
+      "en": "EKP aggregates trusted information from approved enterprise sources | for easy discovery and use by AI agents.",
+      "zh": "EKP 汇集来自经批准的企业来源的可信信息，| 便于轻松发现，并供 AI 智能体使用。"
+    },
+    {
+      "slide": "S3",
+      "en": "Together, these three pillars turn today's knowledge into a foundation that scales | for Lenovo workforce, and for the AI agents we rely on.",
+      "zh": "这三大支柱共同作用，将今天的知识转化为可扩展的基础，| 服务于联想员工，也服务于我们所依赖的 AI 智能体。",
+      "hold": {
+        "after": "on",
+        "seconds": 2.6
+      }
+    }
+  ],
+  "source_text": "Transform Lenovo into a leading Knowledge + AI-Driven Organization by treating trusted knowledge as a strategic asset people and AI continuously create, share, and reuse it. Apply into synergistic Change Pillars: Organization: establish dedicated KM Specialist roles to govern domain knowledge. Processes: standardize workflows for knowledge preparation, knowledge lifecycle, and knowledge operation. Knowledge platform (EKP): Lenovo's governed knowledge foundation. EKP aggregates trusted information from approved enterprise sources for easy discovery and use by AI agents. Together, these three pillars turn today's knowledge into a foundation that scales for Lenovo workforce, and for the AI agents we rely on."
+}

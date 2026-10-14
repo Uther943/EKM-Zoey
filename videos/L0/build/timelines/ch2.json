@@ -1,0 +1,303 @@
+{
+  "section": "ch2",
+  "duration": 29.507,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 2 · What Knowledge Management Means at Lenovo",
+      "start": 0.0,
+      "end": 3.5
+    },
+    {
+      "id": "S1",
+      "title": "More Than a Process",
+      "start": 3.5,
+      "end": 17.988
+    },
+    {
+      "id": "S2",
+      "title": "An AI-Ready Ecosystem",
+      "start": 17.988,
+      "end": 29.507
+    }
+  ],
+  "units": [
+    {
+      "i": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 9.064,
+      "en": "At Lenovo, Enterprise Knowledge Management is more than an activity or process.",
+      "zh": "在联想，企业知识管理不只是一项活动或流程。",
+      "words": [
+        [
+          4.0,
+          "At"
+        ],
+        [
+          4.179,
+          "Lenovo"
+        ],
+        [
+          4.973,
+          "Enterprise"
+        ],
+        [
+          5.624,
+          "Knowledge"
+        ],
+        [
+          6.067,
+          "Management"
+        ],
+        [
+          6.692,
+          "is"
+        ],
+        [
+          6.848,
+          "more"
+        ],
+        [
+          7.122,
+          "than"
+        ],
+        [
+          7.252,
+          "an"
+        ],
+        [
+          7.395,
+          "activity"
+        ],
+        [
+          8.046,
+          "or"
+        ],
+        [
+          8.202,
+          "process"
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "slide": "S1",
+      "start": 9.514,
+      "end": 17.014,
+      "en": "It is a strategic enterprise initiative focused on transforming Lenovo into a leading Knowledge and AI-driven organization.",
+      "zh": "它是一项企业级战略举措，致力于将联想转型为领先的知识与 AI 驱动型组织。",
+      "words": [
+        [
+          9.514,
+          "It"
+        ],
+        [
+          9.647,
+          "is"
+        ],
+        [
+          9.764,
+          "a"
+        ],
+        [
+          9.843,
+          "strategic"
+        ],
+        [
+          10.533,
+          "enterprise"
+        ],
+        [
+          11.145,
+          "initiative"
+        ],
+        [
+          11.757,
+          "focused"
+        ],
+        [
+          12.251,
+          "on"
+        ],
+        [
+          12.395,
+          "transforming"
+        ],
+        [
+          13.137,
+          "Lenovo"
+        ],
+        [
+          13.775,
+          "into"
+        ],
+        [
+          14.061,
+          "a"
+        ],
+        [
+          14.152,
+          "leading"
+        ],
+        [
+          14.517,
+          "Knowledge"
+        ],
+        [
+          15.025,
+          "and"
+        ],
+        [
+          15.298,
+          "AI-driven"
+        ],
+        [
+          15.988,
+          "organization"
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "slide": "S2",
+      "start": 18.488,
+      "end": 27.557,
+      "en": "Our goal is to create a trusted, scalable, and AI-ready knowledge ecosystem that connects people, content, and intelligence across the enterprise.",
+      "zh": "我们的目标是打造一个可信、可扩展、AI 就绪的知识生态系统，在整个企业中连接人员、内容与智能。",
+      "words": [
+        [
+          18.488,
+          "Our"
+        ],
+        [
+          18.656,
+          "goal"
+        ],
+        [
+          18.981,
+          "is"
+        ],
+        [
+          19.124,
+          "to"
+        ],
+        [
+          19.255,
+          "create"
+        ],
+        [
+          19.619,
+          "a"
+        ],
+        [
+          19.684,
+          "trusted"
+        ],
+        [
+          20.4,
+          "scalable"
+        ],
+        [
+          21.195,
+          "and"
+        ],
+        [
+          21.429,
+          "AI-ready"
+        ],
+        [
+          22.028,
+          "knowledge"
+        ],
+        [
+          22.458,
+          "ecosystem"
+        ],
+        [
+          23.239,
+          "that"
+        ],
+        [
+          23.395,
+          "connects"
+        ],
+        [
+          23.851,
+          "people"
+        ],
+        [
+          24.463,
+          "content"
+        ],
+        [
+          25.244,
+          "and"
+        ],
+        [
+          25.374,
+          "intelligence"
+        ],
+        [
+          26.091,
+          "across"
+        ],
+        [
+          26.494,
+          "the"
+        ],
+        [
+          26.598,
+          "enterprise"
+        ]
+      ]
+    }
+  ],
+  "subs": [
+    {
+      "i": 0,
+      "unit": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 9.064,
+      "en": "At Lenovo, Enterprise Knowledge Management is more than an activity or process.",
+      "zh": "在联想，企业知识管理不只是一项活动或流程。"
+    },
+    {
+      "i": 1,
+      "unit": 1,
+      "slide": "S1",
+      "start": 9.514,
+      "end": 11.757,
+      "en": "It is a strategic enterprise initiative",
+      "zh": "它是一项企业级战略举措，"
+    },
+    {
+      "i": 2,
+      "unit": 1,
+      "slide": "S1",
+      "start": 11.757,
+      "end": 17.014,
+      "en": "focused on transforming Lenovo into a leading Knowledge and AI-driven organization.",
+      "zh": "致力于将联想转型为领先的知识与 AI 驱动型组织。"
+    },
+    {
+      "i": 3,
+      "unit": 2,
+      "slide": "S2",
+      "start": 18.488,
+      "end": 23.239,
+      "en": "Our goal is to create a trusted, scalable, and AI-ready knowledge ecosystem",
+      "zh": "我们的目标是打造一个可信、可扩展、AI 就绪的知识生态系统，"
+    },
+    {
+      "i": 4,
+      "unit": 2,
+      "slide": "S2",
+      "start": 23.239,
+      "end": 27.557,
+      "en": "that connects people, content, and intelligence across the enterprise.",
+      "zh": "在整个企业中连接人员、内容与智能。"
+    }
+  ]
+}

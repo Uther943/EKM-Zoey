@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Closing — Written, Told, and Built</title>
+<link rel="stylesheet" href="../../../../engine/engine.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 closing card -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.3"><circle cx="770" cy="400" r="34" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.35"><circle cx="1150" cy="400" r="34" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.4" data-dur="1.0" points="770,400 960,250 1150,400" fill="none" stroke="#fff" stroke-width="2.5" pathLength="1"/>
+      <g class="a breathe" data-at="s+0.2"><circle cx="960" cy="360" r="78" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.4"><circle cx="960" cy="360" r="118" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="4 10" class="spin"/></g>
+      <g class="a" data-at="s+0.45"><text x="960" y="381" text-anchor="middle" class="svgtext" font-size="56">&lt;/&gt;</text></g>
+      <g class="a" data-at="s+1.0" data-icon="sparkles" data-x="560" data-y="330" data-s="130"></g>
+      <g class="a" data-at="s+1.1" data-icon="sparkles" data-x="1370" data-y="300" data-s="100"></g>
+    </svg>
+    <div class="card-kicker a" data-at="s+0.6">CLOSING</div>
+    <div class="card-title a" data-at="s+0.8">Written, Told, and Built</div>
+    <div class="card-rule a" data-at="s+1.1" data-kind="scalex"></div>
+  </section>
+
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Just Edit the Script</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Code Checks the Layout</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+  <section class="scene" id="S3">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Written, Told, and Built</h1>
+    <div class="content" id="S3c"><svg class="art" viewBox="0 0 1920 1080" id="S3art"></svg></div>
+  </section>
+
+</div>
+<script src="../../build/timelines/timeline_closing.js"></script>
+<script src="../../../../engine/engine.js"></script>
+<script>
+const { el, div, node, pill, line, bracket, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+const svgText = (svg, x, y, text, size, at, fill) => {
+  const t = el("text", { x, y, "text-anchor": "middle", class: "svgtext a", "font-size": size, "data-at": at }, svg);
+  t.textContent = text; if (fill) t.style.fill = fill; return t;
+};
+const flow = (svg, id, d, at, dur = 0.8) => {
+  el("path", { id, d, fill: "none", stroke: "rgba(255,255,255,.55)", "stroke-width": 2, pathLength: 1, class: "draw", "data-at": at, "data-dur": "0.5" }, svg);
+  el("circle", { cx: 0, cy: 0, r: 8, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": id, "data-at": at, "data-dur": dur }, svg);
+};
+
+// ---------- S1: edit the script, run it again; voice, timing and pictures update together ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c");
+  node(svg, html, { x: 400, y: 520, r: 80, fill: PURPLE, icon: "doc", iconSize: 96, at: "u0" });
+  el("g", { class: "a", "data-at": "u0@edit", "data-icon": "pen", "data-x": 470, "data-y": 450, "data-s": 70 }, svg);
+  pill(html, { text: "Just Edit the Script", x: 400 - 170, y: 640, w: 340, sm: true, at: "u0@edit" });
+  flow(svg, "S1a", "M482 520 L 778 520", "u0@run-0.3", 0.6);
+  node(svg, html, { x: 860, y: 520, r: 80, fill: R, glow: true, breathe: true, icon: "reuse", iconSize: 96, label: "Run It Again", labelGap: 20, at: "u0@run" });
+  // everything that depends on the script refreshes at once
+  const top = 360, step = 84;
+  bracket(svg, { x: 1190, y1: top, y2: top + step * 2 + 62, at: "u1@voice-0.2" });
+  [["Voice", "voice"], ["Timing", "timing"], ["Pictures", "pictures"]].forEach(([text, w], k) => {
+    pill(html, { text, x: 1220, y: top + k * step, w: 280, sm: true, left: true, dot: true, at: `u1@${w}` });
+    flow(svg, `S1b${k}`, `M942 520 C 1060 520, 1080 ${top + 31 + k * step}, 1180 ${top + 31 + k * step}`, `u1@${w}-0.5`, 0.5);
+  });
+  pill(html, { text: "All Update Together", x: 1220, y: 660, w: 380, red: true, at: "u1@together" });
+  el("g", { class: "a", "data-at": "u1@together+0.3", "data-icon": "sparkles", "data-x": 1700, "data-y": 330, "data-s": 100 }, svg);
+});
+
+// ---------- S2: before rendering, code checks the layout: nothing overlaps, nothing leaves the screen ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c");
+  node(svg, html, { x: 420, y: 420, r: 80, fill: R, glow: true, icon: "shield", iconSize: 96, label: "Code Checks", labelGap: 20, at: "u2" });
+  pill(html, { text: "Nothing Overlaps", x: 190, y: 600, w: 460, sm: true, left: true, dot: true, at: "u2@overlaps" });
+  pill(html, { text: "Nothing Leaves the Screen", x: 190, y: 684, w: 460, sm: true, left: true, dot: true, at: "u2@leaves" });
+  // the screen with its safe area, and the modules laid out inside
+  const F = [760, 300, 920, 480];
+  el("rect", { x: F[0], y: F[1], width: F[2], height: F[3], rx: 18, fill: "rgba(255,255,255,.03)", stroke: "rgba(255,255,255,.5)",
+    "stroke-width": 2, "stroke-dasharray": "8 8", class: "a", "data-at": "u2@layout" }, svg);
+  el("rect", { x: F[0], y: F[1], width: F[2], height: F[3], rx: 18, fill: "none", stroke: R, "stroke-width": 3, pathLength: 1,
+    class: "draw", "data-at": "u2@screen", "data-dur": "0.9", filter: "url(#glowSoft)" }, svg);
+  const mods = [[820, 360, 330, 130], [1210, 360, 410, 130], [820, 560, 800, 160]];
+  mods.forEach(([x, y, w, h], k) => {
+    const g = el("g", { class: "a", "data-at": `u2@layout+${(0.2 + k * 0.15).toFixed(2)}` }, svg);
+    el("rect", { x, y, width: w, height: h, rx: 14, fill: "rgba(255,255,255,.1)", stroke: "rgba(255,255,255,.25)", "stroke-width": 1.5 }, g);
+    el("circle", { cx: x + 44, cy: y + h / 2, r: 22, fill: k === 1 ? R : k ? BLUE : PURPLE }, g);
+    el("rect", { x: x + 84, y: y + h / 2 - 14, width: w * 0.5, height: 10, rx: 5, fill: "rgba(255,255,255,.7)" }, g);
+    el("rect", { x: x + 84, y: y + h / 2 + 6, width: w * 0.32, height: 8, rx: 4, fill: "rgba(255,255,255,.4)" }, g);
+  });
+  // gap markers between the modules: red dimension lines with end ticks
+  const gapMark = (x1, y1, x2, y2, at) => {
+    const g = el("g", { class: "a", "data-at": at }, svg), v = x1 === x2;
+    el("line", { x1, y1, x2, y2, stroke: R, "stroke-width": 2.5 }, g);
+    [[x1, y1], [x2, y2]].forEach(([x, y]) => el("line", Object.assign(v ? { x1: x - 10, y1: y, x2: x + 10, y2: y } : { x1: x, y1: y - 10, x2: x, y2: y + 10 },
+      { stroke: R, "stroke-width": 2.5 }), g));
+    return g;
+  };
+  gapMark(1156, 425, 1204, 425, "u2@overlaps");
+  gapMark(985, 496, 985, 554, "u2@overlaps+0.15");
+  gapMark(1415, 496, 1415, 554, "u2@overlaps+0.3");
+});
+
+// ---------- S3: written as words, told by a voice, built with code -> From Code to Video ----------
+ENGINE.build(() => {
+  const svg = $("S3art"), html = $("S3c"), core = [1300, 470];
+  el("circle", { cx: core[0], cy: core[1], r: 172, fill: "none", stroke: "rgba(255,255,255,.3)", "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" },
+    el("g", { class: "a", "data-at": "u3@video" }, svg));
+  const items = [[340, "doc", "Written as Words", "written", PURPLE], [560, "chat", "Told by a Voice", "told", BLUE], [780, null, "Built with Code", "built", PURPLE]];
+  items.forEach(([y, icon, label, w, fill], k) => {
+    node(svg, html, { x: 480, y, r: 56, fill, icon, iconSize: 64, text: icon ? null : "</>", textSize: 40, label, at: `u3@${w}` });
+    flow(svg, `S3f${k}`, `M540 ${y} C 820 ${y}, 900 ${core[1]}, ${core[0] - 134} ${core[1]}`, `u3@code+${(k * 0.1).toFixed(1)}`, 0.8);
+  });
+  const hit = "u3@code+0.8";
+  const g = el("g", { class: "a breathe", "data-kind": "bloom", "data-at": hit, "data-dur": "0.7" }, svg);
+  el("circle", { cx: core[0], cy: core[1], r: 130, fill: R, filter: "url(#glowRed)" }, g);
+  const t = el("text", { x: core[0], y: core[1] + 33, "text-anchor": "middle", class: "svgtext", "font-size": 96 }, g);
+  t.textContent = "</>";
+  el("circle", { cx: core[0], cy: core[1], r: 130, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": 130,
+    "data-at": hit, "data-dur": "0.9" }, svg);
+  svgText(svg, core[0], 740, "From Code to Video", 64, hit + "+0.3");
+  el("rect", { x: core[0] - 150, y: 768, width: 300, height: 3, fill: R, filter: "url(#glowDot)", class: "a", "data-kind": "scalex",
+    "data-at": hit + "+0.5" }, svg);
+  el("g", { class: "a", "data-at": hit + "+0.4", "data-icon": "sparkles", "data-x": 1600, "data-y": 300, "data-s": 120 }, svg);
+  el("g", { class: "a", "data-at": hit + "+0.6", "data-icon": "sparkles", "data-x": 1000, "data-y": 300, "data-s": 80 }, svg);
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>

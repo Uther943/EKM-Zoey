@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chapter 2 — The Voice Sets the Clock</title>
+<link rel="stylesheet" href="../../../../engine/engine.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 chapter card -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.3"><circle cx="770" cy="400" r="34" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.35"><circle cx="1150" cy="400" r="34" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.4" data-dur="1.0" points="770,400 960,250 1150,400" fill="none" stroke="#fff" stroke-width="2.5" pathLength="1"/>
+      <g class="a breathe" data-at="s+0.2"><circle cx="960" cy="360" r="78" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.4"><circle cx="960" cy="360" r="118" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="4 10" class="spin"/></g>
+      <g class="a" data-at="s+0.45"><text x="960" y="381" text-anchor="middle" class="svgtext" font-size="60">02</text></g>
+      <g class="a" data-at="s+1.0" data-icon="sparkles" data-x="560" data-y="330" data-s="130"></g>
+      <g class="a" data-at="s+1.1" data-icon="sparkles" data-x="1370" data-y="300" data-s="100"></g>
+    </svg>
+    <div class="card-kicker a" data-at="s+0.6">CHAPTER 2</div>
+    <div class="card-title a" data-at="s+0.8">The Voice Sets the Clock</div>
+    <div class="card-rule a" data-at="s+1.1" data-kind="scalex"></div>
+  </section>
+
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">When Each Word Is Spoken</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Tied to a Word</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+</div>
+<script src="../../build/timelines/timeline_ch2.js"></script>
+<script src="../../../../engine/engine.js"></script>
+<script>
+const { TL, el, div, node, pill, line, bracket, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+const svgText = (svg, x, y, text, size, at, fill) => {
+  const t = el("text", { x, y, "text-anchor": "middle", class: "svgtext a", "font-size": size, "data-at": at }, svg);
+  t.textContent = text; if (fill) t.style.fill = fill; return t;
+};
+
+// ---------- S1: the voice sets the clock; every word of the read-aloud script gets its moment ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c");
+  node(svg, html, { x: 400, y: 540, r: 100, fill: R, glow: true, breathe: true, icon: "clock", iconSize: 120, label: "Sets the Clock", labelGap: 22, at: "u0@clock" });
+  // the computer voice: a waveform
+  const x0 = 640, x1 = 1720, wy = 400;
+  let d = `M${x0} ${wy}`;
+  for (let x = x0; x <= x1; x += 6) {
+    const env = 0.35 + 0.65 * Math.abs(Math.sin((x - x0) / 95)) * (0.6 + 0.4 * Math.sin((x - x0) / 31));
+    d += ` L ${x} ${(wy + Math.sin((x - x0) / 4.3) * 46 * env).toFixed(1)}`;
+  }
+  el("path", { d, fill: "none", stroke: "rgba(255,255,255,.7)", "stroke-width": 2, "stroke-linejoin": "round", pathLength: 1, class: "draw",
+    "data-at": "u1@read", "data-dur": "1.6" }, svg);
+  line(svg, { x1: 500, y1: 540, x2: x0 - 20, y2: wy, at: "u1@read-0.3", w: 2 });
+  // a time axis: the words of the sentence appear the moment they are spoken, each with its real time
+  const ay = 680, words = ["script", "read", "aloud", "computer", "voice"], U = TL.units[1];
+  line(svg, { x1: x0, y1: ay, x2: x1, y2: ay, at: "u1@script-0.4", w: 2.5, dur: 0.8 });
+  el("path", { id: "S1axis", d: `M${x0} ${ay} L ${x1} ${ay}`, fill: "none", stroke: "none" }, svg);
+  words.forEach((w, k) => {
+    const cx = 760 + k * 220, t = U.words.find(([, x]) => x.toLowerCase() === w)[0];
+    pill(html, { text: w, x: cx - 95, y: ay - 112, w: 190, sm: true, at: `u1@${w}` });
+    el("circle", { cx, cy: ay, r: 7, fill: R, filter: "url(#glowDot)", class: "a", "data-at": `u1@${w}` }, svg);
+    svgText(svg, cx, ay + 46, t.toFixed(2) + "s", 26, `u2@moment+${(k * 0.15).toFixed(2)}`, "rgba(255,255,255,.9)");
+  });
+  // a playhead runs along the axis while the exact moments come up
+  el("circle", { cx: 0, cy: 0, r: 10, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": "S1axis",
+    "data-at": "u2@exact", "data-dur": "2.0" }, svg);
+  pill(html, { text: "The Exact Moment", x: 990, y: 790, w: 400, sm: true, red: true, at: "u2@spoken" });
+});
+
+// ---------- S2: circles and labels are tied to a word; "network" makes the network appear ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c"), core = [1340, 540], out = "u5-0.3";
+  // every circle and label is tied to a word
+  const tieG = el("g", { class: "a", "data-at": "u3@circle-0.2", "data-dur": "0.2", "data-out": out }, svg);
+  bracket(tieG, { x: 270, y1: 380, y2: 526, at: "u3@circle-0.2" });
+  pill(html, { text: "Circle", x: 300, y: 380, w: 240, sm: true, left: true, dot: true, at: "u3@circle", out });
+  pill(html, { text: "Label", x: 300, y: 464, w: 240, sm: true, left: true, dot: true, at: "u3@label", out });
+  [411, 495].forEach(y => line(tieG, { x1: 552, y1: y, x2: 664, y2: 453, stroke: R, w: 2.5, at: "u3@tied", dur: 0.5 }));
+  pill(html, { text: "A Word", x: 676, y: 422, w: 200, sm: true, red: true, at: "u3@word", out });
+  // the word "network" sends a light dot; where it lands, the network grows
+  pill(html, { text: "“network”", x: 300, y: 640, w: 260, sm: true, at: "u4@says", out });
+  const d = "M572 671 C 800 671, 960 560, 1246 545";
+  el("path", { id: "S2go", d, fill: "none", stroke: "rgba(255,255,255,.45)", "stroke-width": 2, pathLength: 1, class: "draw",
+    "data-at": "u4@network-0.2", "data-dur": "0.6" }, svg);
+  el("circle", { cx: 0, cy: 0, r: 9, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": "S2go",
+    "data-at": "u4@network", "data-dur": "0.9" }, svg);
+  const hit = "u4@network+0.9";
+  const sats = [[-90, "doc"], [-18, "video"], [54, "chat"], [126, "site"], [198, "chip"]].map(([a, icon]) =>
+    [core[0] + 230 * Math.cos(a * Math.PI / 180), core[1] + 230 * Math.sin(a * Math.PI / 180), icon]);
+  sats.forEach(([x, y], k) => line(svg, { x1: core[0], y1: core[1], x2: x, y2: y, at: `u4@appears+${(k * 0.12).toFixed(2)}`, w: 2 }));
+  sats.forEach(([x, y], k) => {
+    const [x2, y2] = sats[(k + 1) % 5];
+    el("line", { x1: x, y1: y, x2, y2, stroke: "rgba(255,255,255,.3)", "stroke-width": 1.5, pathLength: 1, class: "draw",
+      "data-at": `u4@appears+${(0.6 + k * 0.08).toFixed(2)}`, "data-dur": "0.5" }, svg);
+  });
+  const g = el("g", { class: "a breathe", "data-kind": "bloom", "data-at": hit, "data-dur": "0.7" }, svg);
+  el("circle", { cx: core[0], cy: core[1], r: 90, fill: R, filter: "url(#glowRed)" }, g);
+  el("g", { "data-icon": "network", "data-x": core[0], "data-y": core[1], "data-s": 108, "data-on": "red" }, g);
+  el("circle", { cx: core[0], cy: core[1], r: 90, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": 90,
+    "data-at": hit, "data-dur": "0.9" }, svg);
+  sats.forEach(([x, y, icon], k) => node(svg, html, { x, y, r: 46, fill: k % 2 ? BLUE : PURPLE, icon, iconSize: 52,
+    at: `u4@appears+${(k * 0.12).toFixed(2)}` }));
+  // pictures, voice and subtitles always stay in sync
+  bracket(svg, { x: 270, y1: 360, y2: 590, at: "u5@pictures-0.2" });
+  [["Pictures", "pictures"], ["Voice", "voice"], ["Subtitles", "subtitles"]].forEach(([text, w], k) =>
+    pill(html, { text, x: 300, y: 360 + k * 84, w: 260, sm: true, left: true, dot: true, at: `u5@${w}` }));
+  pill(html, { text: "Always Stay in Sync", x: 240, y: 660, w: 400, red: true, at: "u5@sync" });
+  el("circle", { cx: core[0], cy: core[1], r: 90, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": 90,
+    "data-at": "u5@sync", "data-dur": "0.9" }, svg);
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>

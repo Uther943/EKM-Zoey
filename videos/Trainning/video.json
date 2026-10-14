@@ -1,0 +1,4 @@
+{
+  "order": ["intro", "ch1", "ch2", "ch3", "closing"],
+  "limit_seconds": 180
+}

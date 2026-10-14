@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chapter 1 — What is Knowledge Management?</title>
+<link rel="stylesheet" href="../../../../engine/engine.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 chapter card -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.3"><circle cx="770" cy="400" r="34" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.35"><circle cx="1150" cy="400" r="34" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.4" data-dur="1.0" points="770,400 960,250 1150,400" fill="none" stroke="#fff" stroke-width="2.5" pathLength="1"/>
+      <g class="a breathe" data-at="s+0.2"><circle cx="960" cy="360" r="78" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.4"><circle cx="960" cy="360" r="118" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="4 10" class="spin"/></g>
+      <g class="a" data-at="s+0.45"><text x="960" y="381" text-anchor="middle" class="svgtext" font-size="60">01</text></g>
+      <g class="a" data-at="s+1.0" data-icon="sparkles" data-x="580" data-y="330" data-s="130"></g>
+      <g class="a" data-at="s+1.1" data-icon="sparkles" data-x="1350" data-y="300" data-s="100"></g>
+    </svg>
+    <div class="card-kicker a" data-at="s+0.6">CHAPTER 1</div>
+    <div class="card-title a" data-at="s+0.8">What is Knowledge Management?</div>
+    <div class="card-rule a" data-at="s+1.1" data-kind="scalex"></div>
+  </section>
+
+  <!-- S1 definition: the KM cycle -->
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Knowledge Management (KM)</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <!-- S2 what KM ensures -->
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">What KM Ensures</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+  <!-- S3 shared, not isolated -->
+  <section class="scene" id="S3">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Shared, Not Isolated</h1>
+    <div class="content" id="S3c"><svg class="art" viewBox="0 0 1920 1080" id="S3art"></svg></div>
+  </section>
+
+  <!-- S4 a strategic enterprise asset -->
+  <section class="scene" id="S4">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">A Strategic Enterprise Asset</h1>
+    <div class="content" id="S4c"><svg class="art" viewBox="0 0 1920 1080" id="S4art"></svg></div>
+  </section>
+
+</div>
+<script src="../../build/timelines/timeline_ch1.js"></script>
+<script src="../../../../engine/engine.js"></script>
+<script>
+const { el, node, pill, line, bracket, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+
+// ---------- S1: KM core + 5-step cycle, then pull back to show it working across separate organizations ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c"), cx = 860, cy = 610, rad = 250, A = "u0@across";
+  // the whole capability ring lives in one svg group + one label layer, so the "camera" can pull back
+  const zoom = { at: A, dur: "1.0", kind: "zoom", zoom: "100,-240,0.6", origin: `${cx},${cy}` };
+  const zg = el("g", { "data-at": zoom.at, "data-dur": zoom.dur, "data-kind": "zoom", "data-zoom": zoom.zoom, "data-origin": zoom.origin }, svg);
+  const zl = ENGINE.div("", undefined, { position: "absolute", inset: "0" }, html, zoom);
+  el("circle", { cx, cy, r: rad, fill: "none", stroke: "rgba(255,255,255,.3)", "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" },
+     el("g", { class: "a", "data-at": "p0+0.5" }, zg));
+  const og = el("g", { class: "spin" }, el("g", { class: "a", "data-at": "p0+0.8" }, zg));
+  el("circle", { cx, cy, r: rad, fill: "none", stroke: "none" }, og);
+  el("circle", { cx, cy: cy - rad, r: 8, fill: R, filter: "url(#glowDot)" }, og);
+  node(zg, zl, { x: cx, y: cy, r: 115, fill: R, glow: true, breathe: true, text: "KM", textSize: 64, at: "p0+0.2" });
+  [["pen", "Creating", "creating"], ["grid", "Organizing", "organizing"], ["share", "Sharing", "sharing"],
+   ["shield", "Governing", "governing"], ["reuse", "Reusing", "reusing"]].forEach(([icon, label, word], k) => {
+    const a = (-90 + k * 72) * Math.PI / 180, x = cx + Math.cos(a) * rad, y = cy + Math.sin(a) * rad;
+    node(zg, zl, { x, y, r: 54, fill: k % 2 ? BLUE : PURPLE, icon, iconSize: 60, label, labelGap: 22,
+      labelPos: k === 0 || k === 1 || k === 4 ? "above" : "below", at: `u0@${word}` });
+  });
+
+  // three independent organizations, each with its own thin boundary and internal nodes
+  const orgs = [500, 960, 1420].map(x => ({ x, y: 740 }));
+  const inner = [[-95, -40, 12], [0, -62, 11], [90, -35, 13], [-55, 50, 11], [45, 55, 12], [115, 45, 9]];
+  const edges = [[0, 1], [1, 2], [0, 3], [3, 4], [4, 5], [2, 5], [1, 4]];
+  const P = (o, k) => [o.x + inner[k][0], o.y + inner[k][1]];
+  orgs.forEach((o, i) => {
+    const at = `${A}+${(0.55 + i * 0.1).toFixed(2)}`;
+    el("rect", { x: o.x - 170, y: o.y - 115, width: 340, height: 230, rx: 26, fill: "rgba(61,30,109,.18)",
+      stroke: "rgba(255,255,255,.45)", "stroke-width": 1.5, pathLength: 1, class: "draw", "data-at": at, "data-dur": "0.9" }, svg);
+    edges.forEach(([a, b]) => { const [x1, y1] = P(o, a), [x2, y2] = P(o, b);
+      line(svg, { x1, y1, x2, y2, w: 1.2, stroke: "rgba(255,255,255,.35)", at: `${at}+0.35`, dur: 0.5 }); });
+    inner.forEach(([dx, dy, r], k) => el("circle", { cx: o.x + dx, cy: o.y + dy, r, fill: k % 2 ? BLUE : PURPLE,
+      stroke: "rgba(255,255,255,.6)", "stroke-width": 1.5, class: "a", "data-at": `${at}+${(0.3 + k * 0.05).toFixed(2)}` }, svg));
+  });
+  // thin curves fan out from the (pulled-back) KM ring to every organization
+  const ringBottom = [960, 520];
+  orgs.forEach((o, i) => {
+    const [x, y] = P(o, 1), id = `S1feed${i}`;
+    el("path", { id, d: `M${ringBottom[0]} ${ringBottom[1]} C ${ringBottom[0]} ${ringBottom[1] + 150}, ${x} ${y - 110}, ${x} ${y - 11}`,
+      fill: "none", stroke: "rgba(255,255,255,.5)", "stroke-width": 1.5, pathLength: 1, class: "draw",
+      "data-at": `${A}+${(1.2 + i * 0.12).toFixed(2)}`, "data-dur": "0.6" }, svg);
+  });
+  // knowledge flows across the boundaries: ring -> A, A -> B, B -> C; each receiving node lights up
+  const hops = [
+    { path: "S1feed0", at: 1.9, dur: 0.6, to: P(orgs[0], 1), r: 11 },
+    { d: `M${P(orgs[0], 2)} C 680 640, 780 640, ${P(orgs[1], 0)}`, at: 2.5, dur: 0.8, to: P(orgs[1], 0), r: 12 },
+    { d: `M${P(orgs[1], 2)} C 1140 640, 1240 640, ${P(orgs[2], 0)}`, at: 3.3, dur: 0.8, to: P(orgs[2], 0), r: 12 },
+  ];
+  hops.forEach((h, i) => {
+    let id = h.path;
+    if (h.d) {
+      id = `S1hop${i}`;
+      el("path", { id, d: h.d, fill: "none", stroke: "rgba(233,58,58,.75)", "stroke-width": 2, "stroke-dasharray": "0.02 0.015",
+        pathLength: 1, class: "draw", "data-at": `${A}+${h.at}`, "data-dur": h.dur }, svg);
+    }
+    el("circle", { cx: 0, cy: 0, r: 8, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": id,
+      "data-at": `${A}+${h.at}`, "data-dur": h.dur }, svg);
+    const arrive = `${A}+${(h.at + h.dur).toFixed(2)}`;
+    el("circle", { cx: h.to[0], cy: h.to[1], r: h.r + 2, fill: R, filter: "url(#glowDot)", class: "a", "data-at": arrive, "data-dur": "0.35" }, svg);
+    el("circle", { cx: h.to[0], cy: h.to[1], r: h.r, fill: "none", stroke: R, "stroke-width": 2, class: "pulse",
+      "data-r0": h.r, "data-at": arrive, "data-dur": "0.9" }, svg);
+  });
+  // panorama caption: plain text, no box, no leader line
+  const cap = ENGINE.div("nlabel a", "Across an Organization", { left: "960px", top: "878px", fontSize: "34px" }, html, { at: `${A}+4.2` });
+});
+
+// ---------- S2: what valuable information should be ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c"), cx = 600, cy = 560;
+  el("circle", { cx, cy, r: 180, fill: "none", stroke: "rgba(255,255,255,.35)", "stroke-width": 2, "stroke-dasharray": "4 12", class: "spin" },
+     el("g", { class: "a", "data-at": "u1+0.3" }, svg));
+  node(svg, html, { x: cx, y: cy, r: 140, fill: R, glow: true, breathe: true, icon: "shield", iconSize: 150, at: "u1" });
+  line(svg, { x1: cx + 192, y1: cy, x2: 960, y2: cy, at: "u1+0.5", w: 2 });
+  const top = 312, step = 104;
+  bracket(svg, { x: 960, y1: top, y2: top + step * 4 + 81, at: "u1+0.6" });
+  ["Easy to Find", "Accurate and Trustworthy", "Reusable by Others", "Maintained over Time", "Available When People Need It"]
+    .forEach((text, k) => pill(html, { text, x: 1000, y: top + k * step, w: 700, left: true, dot: true, at: `u${2 + k}` }));
+});
+
+// ---------- S3: shared across teams vs isolated silos ----------
+ENGINE.build(() => {
+  const svg = $("S3art"), html = $("S3c");
+  pill(html, { text: "Strategic Business Asset", x: 1320, y: 520, w: 460, red: true, at: "p8f0.45" });
+  const hub = [980, 560], teams = [[820, 380], [1140, 380], [980, 760]];
+  teams.forEach(([x, y], k) => line(svg, { x1: hub[0], y1: hub[1], x2: x, y2: y, at: `p9f${(0.35 + k * 0.08).toFixed(2)}` }));
+  line(svg, { x1: 820, y1: 380, x2: 1140, y2: 380, at: "p9f0.6", w: 1.5, stroke: "rgba(255,255,255,.5)" });
+  line(svg, { x1: 1060, y1: 560, x2: 1330, y2: 560, at: "p9f0.75", w: 2 });
+  node(svg, html, { x: hub[0], y: hub[1], r: 80, fill: R, glow: true, breathe: true, icon: "network", iconSize: 90, at: "p9f0.3" });
+  teams.forEach(([x, y], k) => node(svg, html, { x, y, r: 50, fill: k % 2 ? BLUE : PURPLE, icon: "team", iconSize: 56,
+    at: `p9f${(0.4 + k * 0.08).toFixed(2)}`, drift: k,
+    label: k === 2 ? "Shared and Leveraged Across Teams" : null, labelAt: "p9f0.6" }));
+  // isolated silos: dimmed nodes inside dashed rings, not connected to anything
+  [[420, 400, "person", "Individuals", "p10f0.62"], [420, 720, "building", "Departments", "p10f0.82"]].forEach(([x, y, icon, label, at], k) => {
+    el("circle", { cx: x, cy: y, r: 74, fill: "none", stroke: "rgba(233,58,58,.7)", "stroke-width": 2, "stroke-dasharray": "5 9", class: "spin" },
+       el("g", { class: "a", "data-at": at }, svg));
+    node(svg, html, { x, y, r: 54, fill: PURPLE, opacity: 0.55, icon, iconSize: 58, at, label, labelPos: "below" });
+  });
+  // the y of the label under a dashed ring: push it below the ring
+  html.querySelectorAll(".nlabel").forEach(d => { if (d.textContent === "Individuals" || d.textContent === "Departments") d.style.top = (parseFloat(d.style.top) + 20) + "px"; });
+});
+
+// ---------- S4: KM benefits flow into a strategic enterprise asset ----------
+ENGINE.build(() => {
+  const svg = $("S4art"), html = $("S4c"), core = [1370, 560];
+  el("circle", { cx: core[0], cy: core[1], r: 180, fill: "none", stroke: "rgba(233,58,58,.7)", "stroke-width": 2.5, "stroke-dasharray": "60 30", class: "spinr" },
+     el("g", { class: "a", "data-at": "p11f0.6" }, svg));
+  node(svg, html, { x: core[0], y: core[1], r: 140, fill: R, glow: true, breathe: true, icon: "layers", iconSize: 140, at: "p11f0.55" });
+  html.appendChild(Object.assign(document.createElement("div"), { className: "nlabel a", textContent: "Strategic Enterprise Asset" }));
+  const lb = html.lastChild; lb.style.left = core[0] + "px"; lb.style.top = (core[1] + 200) + "px"; lb.dataset.at = "p11f0.7";
+  const items = [["Reducing Duplication", "p12"], ["Improving Decision-Making", "p12f0.3"], ["Accelerating Onboarding", "p12f0.62"],
+                 ["Faster Access to Information", "p13"], ["Powering AI with Trusted Knowledge", "p13f0.5"]];
+  const top = 360, step = 84, x0 = 300, w = 600;
+  bracket(svg, { x: 270, y1: top, y2: top + step * 4 + 62, at: "p12-0.2" });
+  items.forEach(([text, at], k) => {
+    const y = top + k * step;
+    pill(html, { text, x: x0, y, w, sm: true, left: true, dot: k < 4, red: k === 4, at });
+    const yc = y + 31, d = `M${x0 + w + 10} ${yc} C ${x0 + w + 150} ${yc}, ${core[0] - 300} ${core[1] + (yc - core[1]) * 0.3}, ${core[0] - 150} ${core[1] + (yc - core[1]) * 0.15}`;
+    el("path", { d, fill: "none", stroke: "rgba(255,255,255,.45)", "stroke-width": 2, pathLength: 1, class: "draw", "data-at": at + "+0.2" }, svg);
+    el("path", { d, fill: "none", stroke: R, "stroke-width": 4, "stroke-linecap": "round", "stroke-dasharray": "0.04 0.2",
+      pathLength: 1, class: "stream", "data-at": at + "+0.5", filter: "url(#glowSoft)" }, svg);
+  });
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>

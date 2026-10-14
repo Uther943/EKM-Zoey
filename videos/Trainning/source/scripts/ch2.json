@@ -1,0 +1,69 @@
+{
+  "section": "ch2",
+  "voice": "en-US-GuyNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 2 · The Voice Sets the Clock"
+    },
+    {
+      "id": "S1",
+      "title": "When Each Word Is Spoken"
+    },
+    {
+      "id": "S2",
+      "title": "Tied to a Word"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "The voice sets the clock for everything.",
+      "zh": "配音决定了一切的时间。"
+    },
+    {
+      "slide": "S1",
+      "en": "The script is read aloud by a computer voice,",
+      "zh": "文稿由电脑语音朗读出来，"
+    },
+    {
+      "slide": "S1",
+      "list": true,
+      "en": "and we learn the exact moment each word is spoken.",
+      "zh": "我们也因此知道每个词是在哪一刻说出来的。",
+      "hold": {
+        "after": "spoken",
+        "seconds": 1.5
+      }
+    },
+    {
+      "slide": "S2",
+      "en": "Every circle and label is tied to a word.",
+      "zh": "每个圆、每个标签都绑定在一个词上。"
+    },
+    {
+      "slide": "S2",
+      "en": "When the voice says \"network\", the network appears.",
+      "zh": "旁白说到\"network\"时，网络就出现在画面上。"
+    },
+    {
+      "slide": "S2",
+      "en": "So pictures, voice, and subtitles always stay in sync.",
+      "zh": "所以画面、配音和字幕始终同步。",
+      "hold": {
+        "after": "sync",
+        "seconds": 1.5
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "kind": "ding",
+      "at": "u4@network+0.9",
+      "pitch": 1568
+    }
+  ],
+  "source_text": "The voice sets the clock for everything. The script is read aloud by a computer voice, and we learn the exact moment each word is spoken. Every circle and label is tied to a word. When the voice says \"network\", the network appears. So pictures, voice, and subtitles always stay in sync."
+}

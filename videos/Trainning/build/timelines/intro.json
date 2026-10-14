@@ -1,0 +1,376 @@
+{
+  "section": "intro",
+  "duration": 24.452,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "From Code to Video",
+      "start": 0.0,
+      "end": 4.0
+    },
+    {
+      "id": "S1",
+      "title": "Built with Code",
+      "start": 4.0,
+      "end": 10.698
+    },
+    {
+      "id": "S2",
+      "title": "Five Simple Steps",
+      "start": 10.698,
+      "end": 24.452
+    }
+  ],
+  "units": [
+    {
+      "i": 0,
+      "slide": "S1",
+      "start": 4.5,
+      "end": 8.012,
+      "en": "The video you are watching was not filmed or edited by hand.",
+      "zh": "你正在看的这个视频，不是拍出来的，也不是手工剪出来的。",
+      "words": [
+        [
+          4.5,
+          "The"
+        ],
+        [
+          4.604,
+          "video"
+        ],
+        [
+          5.047,
+          "you"
+        ],
+        [
+          5.203,
+          "are"
+        ],
+        [
+          5.36,
+          "watching"
+        ],
+        [
+          5.776,
+          "was"
+        ],
+        [
+          5.972,
+          "not"
+        ],
+        [
+          6.232,
+          "filmed"
+        ],
+        [
+          6.623,
+          "or"
+        ],
+        [
+          6.818,
+          "edited"
+        ],
+        [
+          7.209,
+          "by"
+        ],
+        [
+          7.404,
+          "hand"
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "slide": "S1",
+      "start": 8.462,
+      "end": 9.898,
+      "en": "It was built with code.",
+      "zh": "它是用代码做出来的。",
+      "words": [
+        [
+          8.462,
+          "It"
+        ],
+        [
+          8.621,
+          "was"
+        ],
+        [
+          8.816,
+          "built"
+        ],
+        [
+          9.102,
+          "with"
+        ],
+        [
+          9.298,
+          "code"
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "slide": "S2",
+      "start": 11.198,
+      "end": 13.042,
+      "en": "It takes five simple steps:",
+      "zh": "只需要五个简单步骤：",
+      "words": [
+        [
+          11.198,
+          "It"
+        ],
+        [
+          11.356,
+          "takes"
+        ],
+        [
+          11.642,
+          "five"
+        ],
+        [
+          11.968,
+          "simple"
+        ],
+        [
+          12.371,
+          "steps"
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "slide": "S2",
+      "start": 13.192,
+      "end": 14.244,
+      "en": "write the script,",
+      "zh": "写文稿，",
+      "words": [
+        [
+          13.192,
+          "write"
+        ],
+        [
+          13.461,
+          "the"
+        ],
+        [
+          13.604,
+          "script"
+        ]
+      ]
+    },
+    {
+      "i": 4,
+      "slide": "S2",
+      "start": 14.394,
+      "end": 15.818,
+      "en": "turn it into a voice,",
+      "zh": "把它变成配音，",
+      "words": [
+        [
+          14.394,
+          "turn"
+        ],
+        [
+          14.636,
+          "it"
+        ],
+        [
+          14.779,
+          "into"
+        ],
+        [
+          15.053,
+          "a"
+        ],
+        [
+          15.144,
+          "voice"
+        ]
+      ]
+    },
+    {
+      "i": 5,
+      "slide": "S2",
+      "start": 15.968,
+      "end": 17.917,
+      "en": "draw each scene as a web page,",
+      "zh": "把每个画面做成网页，",
+      "words": [
+        [
+          15.968,
+          "draw"
+        ],
+        [
+          16.228,
+          "each"
+        ],
+        [
+          16.515,
+          "scene"
+        ],
+        [
+          16.827,
+          "as"
+        ],
+        [
+          16.983,
+          "a"
+        ],
+        [
+          17.075,
+          "web"
+        ],
+        [
+          17.322,
+          "page"
+        ]
+      ]
+    },
+    {
+      "i": 6,
+      "slide": "S2",
+      "start": 18.067,
+      "end": 19.884,
+      "en": "take a picture of every frame,",
+      "zh": "给每一帧拍一张照片，",
+      "words": [
+        [
+          18.067,
+          "take"
+        ],
+        [
+          18.24,
+          "a"
+        ],
+        [
+          18.344,
+          "picture"
+        ],
+        [
+          18.787,
+          "of"
+        ],
+        [
+          18.917,
+          "every"
+        ],
+        [
+          19.191,
+          "frame"
+        ]
+      ]
+    },
+    {
+      "i": 7,
+      "slide": "S2",
+      "start": 20.034,
+      "end": 22.028,
+      "en": "and join everything into one film.",
+      "zh": "再把所有内容拼成一部完整的影片。",
+      "words": [
+        [
+          20.034,
+          "and"
+        ],
+        [
+          20.189,
+          "join"
+        ],
+        [
+          20.475,
+          "everything"
+        ],
+        [
+          20.97,
+          "into"
+        ],
+        [
+          21.204,
+          "one"
+        ],
+        [
+          21.452,
+          "film"
+        ]
+      ]
+    }
+  ],
+  "subs": [
+    {
+      "i": 0,
+      "unit": 0,
+      "slide": "S1",
+      "start": 4.5,
+      "end": 8.012,
+      "en": "The video you are watching was not filmed or edited by hand.",
+      "zh": "你正在看的这个视频，不是拍出来的，也不是手工剪出来的。"
+    },
+    {
+      "i": 1,
+      "unit": 1,
+      "slide": "S1",
+      "start": 8.462,
+      "end": 9.898,
+      "en": "It was built with code.",
+      "zh": "它是用代码做出来的。"
+    },
+    {
+      "i": 2,
+      "unit": 2,
+      "slide": "S2",
+      "start": 11.198,
+      "end": 13.042,
+      "en": "It takes five simple steps:",
+      "zh": "只需要五个简单步骤："
+    },
+    {
+      "i": 3,
+      "unit": 3,
+      "slide": "S2",
+      "start": 13.192,
+      "end": 14.244,
+      "en": "write the script,",
+      "zh": "写文稿，"
+    },
+    {
+      "i": 4,
+      "unit": 4,
+      "slide": "S2",
+      "start": 14.394,
+      "end": 15.818,
+      "en": "turn it into a voice,",
+      "zh": "把它变成配音，"
+    },
+    {
+      "i": 5,
+      "unit": 5,
+      "slide": "S2",
+      "start": 15.968,
+      "end": 17.917,
+      "en": "draw each scene as a web page,",
+      "zh": "把每个画面做成网页，"
+    },
+    {
+      "i": 6,
+      "unit": 6,
+      "slide": "S2",
+      "start": 18.067,
+      "end": 19.884,
+      "en": "take a picture of every frame,",
+      "zh": "给每一帧拍一张照片，"
+    },
+    {
+      "i": 7,
+      "unit": 7,
+      "slide": "S2",
+      "start": 20.034,
+      "end": 22.028,
+      "en": "and join everything into one film.",
+      "zh": "再把所有内容拼成一部完整的影片。"
+    }
+  ]
+}

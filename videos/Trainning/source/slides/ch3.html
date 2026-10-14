@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chapter 3 — Pictures Become a Video</title>
+<link rel="stylesheet" href="../../../../engine/engine.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 chapter card -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.3"><circle cx="770" cy="400" r="34" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.35"><circle cx="1150" cy="400" r="34" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.4" data-dur="1.0" points="770,400 960,250 1150,400" fill="none" stroke="#fff" stroke-width="2.5" pathLength="1"/>
+      <g class="a breathe" data-at="s+0.2"><circle cx="960" cy="360" r="78" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.4"><circle cx="960" cy="360" r="118" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="4 10" class="spin"/></g>
+      <g class="a" data-at="s+0.45"><text x="960" y="381" text-anchor="middle" class="svgtext" font-size="60">03</text></g>
+      <g class="a" data-at="s+1.0" data-icon="sparkles" data-x="560" data-y="330" data-s="130"></g>
+      <g class="a" data-at="s+1.1" data-icon="sparkles" data-x="1370" data-y="300" data-s="100"></g>
+    </svg>
+    <div class="card-kicker a" data-at="s+0.6">CHAPTER 3</div>
+    <div class="card-title a" data-at="s+0.8">Pictures Become a Video</div>
+    <div class="card-rule a" data-at="s+1.1" data-kind="scalex"></div>
+  </section>
+
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">A Screenshot at Every Step</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">One Track Under the Whole Film</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+</div>
+<script src="../../build/timelines/timeline_ch3.js"></script>
+<script src="../../../../engine/engine.js"></script>
+<script>
+const { el, div, node, pill, line, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+const svgText = (svg, x, y, text, size, at, fill) => {
+  const t = el("text", { x, y, "text-anchor": "middle", class: "svgtext a", "font-size": size, "data-at": at }, svg);
+  t.textContent = text; if (fill) t.style.fill = fill; return t;
+};
+// a small video frame (one screenshot)
+const frame = (svg, x, y, w, h, at, out) => {
+  const g = el("g", { class: "a", "data-at": at, "data-out": out }, svg);
+  el("rect", { x, y, width: w, height: h, rx: 10, fill: "rgba(10,10,15,.55)", stroke: "rgba(255,255,255,.55)", "stroke-width": 2 }, g);
+  el("circle", { cx: x + w * 0.5, cy: y + h * 0.45, r: h * 0.17, fill: R, filter: "url(#glowSoft)" }, g);
+  el("circle", { cx: x + w * 0.22, cy: y + h * 0.55, r: h * 0.1, fill: PURPLE, stroke: "rgba(255,255,255,.5)", "stroke-width": 1.5 }, g);
+  el("circle", { cx: x + w * 0.78, cy: y + h * 0.35, r: h * 0.1, fill: BLUE, stroke: "rgba(255,255,255,.5)", "stroke-width": 1.5 }, g);
+  el("rect", { x: x + w * 0.28, y: y + h * 0.8, width: w * 0.44, height: 6, rx: 3, fill: "rgba(255,255,255,.7)" }, g);
+  return g;
+};
+
+// ---------- S1: the browser steps 1/30 s at a time, a screenshot at every step; eight browsers -> a video with sound ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c"), out = "u2@Eight", core = [1500, 540];
+  node(svg, html, { x: 380, y: 540, r: 80, fill: PURPLE, icon: "site", iconSize: 96, label: "Browser", labelGap: 20, at: "u0@browser" });
+  // a time axis with one tick per step
+  const axG = el("g", { class: "a", "data-at": "u0@moves-0.2", "data-dur": "0.2", "data-out": out }, svg);
+  line(axG, { x1: 520, y1: 660, x2: 1720, y2: 660, at: "u0@moves-0.2", w: 2.5, dur: 0.9 });
+  for (let k = 0; k <= 20; k++)
+    el("line", { x1: 540 + k * 58, y1: 652, x2: 540 + k * 58, y2: 668, stroke: k % 4 ? "rgba(255,255,255,.5)" : R, "stroke-width": 2,
+      class: "a", "data-at": `u0@forward+${(k * 0.03).toFixed(2)}` }, axG);
+  pill(html, { text: "One Thirtieth of a Second", x: 930, y: 700, w: 400, sm: true, at: "u0@thirtieth", out });
+  // a screenshot at every step: frames land on the axis one after another, each with a flash
+  [0, 1, 2, 3, 4].forEach(k => {
+    const x = 560 + k * 230, at = `u1@step+${(k * 0.3).toFixed(2)}`;
+    frame(svg, x, 520, 170, 100, at, out);
+    el("rect", { x: x - 6, y: 514, width: 182, height: 112, rx: 14, fill: "none", stroke: "#fff", "stroke-width": 3, class: "a",
+      "data-at": at, "data-out": at + "+0.15", filter: "url(#glowSoft)" }, svg);
+    line(axG, { x1: x + 85, y1: 622, x2: x + 85, y2: 652, at, w: 1.5, dur: 0.3 });
+  });
+  svgText(svg, 1020, 480, "Screenshot", 28, "u1@screenshot", "#fff").dataset.out = out;
+  // eight browsers side by side, their pictures flow into one video
+  const ys = [...Array(8)].map((_, k) => 330 + k * 60);
+  svgText(svg, 660, 292, "Eight Browsers", 26, "u2@browsers", R);
+  ys.forEach((y, k) => {
+    line(svg, { x1: 462, y1: 540, x2: 636, y2: y, at: `u2@Eight+${(k * 0.05).toFixed(2)}`, w: 1.5, dur: 0.4 });
+    el("circle", { cx: 650, cy: y, r: 14, fill: k % 2 ? BLUE : PURPLE, stroke: "rgba(255,255,255,.5)", "stroke-width": 1.5,
+      class: "a", "data-at": `u2@Eight+${(0.2 + k * 0.05).toFixed(2)}` }, svg);
+    const id = `S1lane${k}`;
+    el("path", { id, d: `M664 ${y} C 1000 ${y}, 1150 ${core[1]}, ${core[0] - 104} ${core[1]}`, fill: "none", stroke: "rgba(255,255,255,.35)",
+      "stroke-width": 1.5, pathLength: 1, class: "draw", "data-at": `u2@side+${(k * 0.05).toFixed(2)}`, "data-dur": "0.8" }, svg);
+    el("circle", { cx: 0, cy: 0, r: 7, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": id,
+      "data-at": `u2@pictures-0.3+${(k * 0.06).toFixed(2)}`, "data-dur": "1.0" }, svg);
+  });
+  const g = el("g", { class: "a breathe", "data-kind": "bloom", "data-at": "u2@video", "data-dur": "0.7" }, svg);
+  el("circle", { cx: core[0], cy: core[1], r: 100, fill: R, filter: "url(#glowRed)" }, g);
+  el("g", { "data-icon": "video", "data-x": core[0], "data-y": core[1], "data-s": 120, "data-on": "red" }, g);
+  el("circle", { cx: core[0], cy: core[1], r: 100, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": 100,
+    "data-at": "u2@video", "data-dur": "0.9" }, svg);
+  pill(html, { text: "A Video with Sound", x: core[0] - 180, y: 690, w: 360, red: true, at: "u2@sound" });
+});
+
+// ---------- S2: sections joined in order; one music track under the whole film, softer whenever the voice speaks ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c"), names = ["Intro", "Chapter 1", "Chapter 2", "Chapter 3", "Closing"];
+  const bx = k => 330 + k * 270, bw = 230, by = 360, bh = 110;
+  names.forEach((n, k) => {
+    const at = `u3@sections+${(k * 0.18).toFixed(2)}`, g = el("g", { class: "a", "data-at": at }, svg);
+    el("rect", { x: bx(k), y: by, width: bw, height: bh, rx: 14, fill: k === 4 ? R : k % 2 ? BLUE : PURPLE, "fill-opacity": k === 4 ? 0.85 : 0.75,
+      stroke: "rgba(255,255,255,.35)", "stroke-width": 1.5 }, g);
+    const t = el("text", { x: bx(k) + bw / 2, y: by + bh / 2 + 10, "text-anchor": "middle", class: "svgtext", "font-size": 28 }, g);
+    t.textContent = n;
+    if (k) el("rect", { x: bx(k) - 40, y: by + bh / 2 - 3, width: 40, height: 6, rx: 3, fill: R, filter: "url(#glowDot)", class: "a",
+      "data-kind": "scalex", "data-at": `u3@joined+${(k * 0.12).toFixed(2)}` }, svg);
+  });
+  // the music under everything; it dips where the voice speaks
+  const x0 = 330, x1 = 1640, wy = 650, talk = [[360, 530], [640, 800], [910, 1070], [1180, 1340], [1450, 1610]];
+  const amp = x => talk.some(([a, b]) => x > a && x < b) ? 9 : 32;
+  let d = `M${x0} ${wy}`;
+  for (let x = x0; x <= x1; x += 5) d += ` L ${x} ${(wy + Math.sin((x - x0) / 5.2) * amp(x) * (0.7 + 0.3 * Math.sin((x - x0) / 23))).toFixed(1)}`;
+  el("path", { d, fill: "none", stroke: "rgba(255,255,255,.75)", "stroke-width": 2, "stroke-linejoin": "round", pathLength: 1, class: "draw",
+    "data-at": "u4@music", "data-dur": "1.8" }, svg);
+  svgText(svg, 240, wy + 9, "Music", 26, "u4@music", "rgba(255,255,255,.85)");
+  talk.forEach(([a, b], k) => el("rect", { x: a, y: 560, width: b - a, height: 14, rx: 7, fill: R, filter: "url(#glowDot)", class: "a",
+    "data-kind": "scalex", "data-at": `u4@voice+${(k * 0.08).toFixed(2)}` }, svg));
+  svgText(svg, 240, 576, "Voice", 26, "u4@voice", R);
+  pill(html, { text: "Softens Whenever the Voice Speaks", x: 985 - 300, y: 760, w: 600, sm: true, red: true, at: "u4@softens" });
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>

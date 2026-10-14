@@ -1,0 +1,165 @@
+{
+  "section": "ch3",
+  "voice": "en-US-AriaNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 3 · Why KM Matters to Every Employee"
+    },
+    {
+      "id": "S1",
+      "title": "Without KM vs. With KM"
+    },
+    {
+      "id": "S2",
+      "title": "Every Employee Plays a Role"
+    },
+    {
+      "id": "S3",
+      "title": "From Individual to Enterprise"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "Employee searches multiple systems.",
+      "zh": "员工需要在多个系统中反复搜索。"
+    },
+    {
+      "slide": "S1",
+      "list": true,
+      "en": "Questions are repeated.",
+      "zh": "同样的问题被一再提出。"
+    },
+    {
+      "slide": "S1",
+      "list": true,
+      "en": "Content becomes outdated.",
+      "zh": "内容逐渐过时。"
+    },
+    {
+      "slide": "S1",
+      "list": true,
+      "en": "Teams recreate work that already exists.",
+      "zh": "团队重复制作已经存在的成果。"
+    },
+    {
+      "slide": "S1",
+      "list": true,
+      "en": "AI tools return inconsistent answers | because knowledge is incomplete or fragmented.",
+      "zh": "AI 工具给出的答案前后不一，| 因为知识不完整或零散。",
+      "pause_after": 0.4
+    },
+    {
+      "slide": "S1",
+      "en": "Employees quickly find trusted answers.",
+      "zh": "员工能快速找到可信的答案。"
+    },
+    {
+      "slide": "S1",
+      "list": true,
+      "en": "Knowledge is reused instead of recreated.",
+      "zh": "知识得到复用，而不是重新创建。"
+    },
+    {
+      "slide": "S1",
+      "list": true,
+      "en": "Best practices are shared globally.",
+      "zh": "最佳实践在全球范围内共享。"
+    },
+    {
+      "slide": "S1",
+      "list": true,
+      "en": "New employees ramp up faster.",
+      "zh": "新员工上手更快。"
+    },
+    {
+      "slide": "S1",
+      "list": true,
+      "en": "AI systems can provide more accurate and trustworthy results.",
+      "zh": "AI 系统能够提供更准确、更可信的结果。"
+    },
+    {
+      "slide": "S2",
+      "en": "Knowledge Management is not something that only a small team owns.",
+      "zh": "知识管理并不只属于某个小团队。"
+    },
+    {
+      "slide": "S2",
+      "en": "Every Lenovo employee plays a role.",
+      "zh": "每一位联想员工都在其中发挥作用。"
+    },
+    {
+      "slide": "S2",
+      "en": "Whenever you:",
+      "zh": "每当你："
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Create a document",
+      "zh": "创建一份文档"
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Share an insight",
+      "zh": "分享一个见解"
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Update a process",
+      "zh": "更新一项流程"
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Answer a question",
+      "zh": "解答一个问题"
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Maintain content",
+      "zh": "维护内容"
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Contribute expertise",
+      "zh": "贡献专业知识"
+    },
+    {
+      "slide": "S2",
+      "en": "You are helping build Lenovo's collective knowledge.",
+      "zh": "你都在帮助构建联想的集体知识。",
+      "hold": {
+        "after": "knowledge",
+        "seconds": 3.0
+      }
+    },
+    {
+      "slide": "S3",
+      "en": "Knowledge becomes more valuable when it can be reused by others.",
+      "zh": "知识能够被他人复用时，会变得更有价值。"
+    },
+    {
+      "slide": "S3",
+      "en": "A document created once can support hundreds or thousands of future decisions | when it is organized, governed, and accessible.",
+      "zh": "一份只创建一次的文档，可以支持成百上千个未来的决策，| 前提是它经过组织、受到治理且易于获取。"
+    },
+    {
+      "slide": "S3",
+      "en": "That's how we transform individual knowledge into enterprise value.",
+      "zh": "这正是我们将个人知识转化为企业价值的方式。",
+      "hold": {
+        "after": "value",
+        "seconds": 2.6
+      }
+    }
+  ],
+  "source_text": "Employee searches multiple systems. Questions are repeated. Content becomes outdated. Teams recreate work that already exists. AI tools return inconsistent answers because knowledge is incomplete or fragmented. Employees quickly find trusted answers. Knowledge is reused instead of recreated. Best practices are shared globally. New employees ramp up faster. AI systems can provide more accurate and trustworthy results. Knowledge Management is not something that only a small team owns. Every Lenovo employee plays a role. Whenever you: Create a document Share an insight Update a process Answer a question Maintain content Contribute expertise You are helping build Lenovo's collective knowledge. Knowledge becomes more valuable when it can be reused by others. A document created once can support hundreds or thousands of future decisions when it is organized, governed, and accessible. That's how we transform individual knowledge into enterprise value."
+}

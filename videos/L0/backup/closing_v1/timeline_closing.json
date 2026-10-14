@@ -1,0 +1,725 @@
+{
+  "section": "closing",
+  "duration": 63.377,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CLOSING · Knowledge Powers AI",
+      "start": 0.0,
+      "end": 3.5
+    },
+    {
+      "id": "S1",
+      "title": "What Knowledge Powers",
+      "start": 3.5,
+      "end": 12.53
+    },
+    {
+      "id": "S2",
+      "title": "From Scattered to Trusted",
+      "start": 12.53,
+      "end": 31.277
+    },
+    {
+      "id": "S3",
+      "title": "A Strategic Advantage",
+      "start": 31.277,
+      "end": 45.838
+    },
+    {
+      "id": "S4",
+      "title": "Knowledge Powers AI",
+      "start": 45.838,
+      "end": 52.344
+    },
+    {
+      "id": "S5",
+      "title": "Learn More",
+      "start": 52.344,
+      "end": 63.377
+    }
+  ],
+  "units": [
+    {
+      "i": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 5.749,
+      "en": "Knowledge powers decisions.",
+      "zh": "知识驱动决策。",
+      "words": [
+        [
+          4.0,
+          "Knowledge"
+        ],
+        [
+          4.478,
+          "powers"
+        ],
+        [
+          4.882,
+          "decisions"
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "slide": "S1",
+      "start": 6.199,
+      "end": 8.214,
+      "en": "Knowledge powers collaboration.",
+      "zh": "知识驱动协作。",
+      "words": [
+        [
+          6.199,
+          "Knowledge"
+        ],
+        [
+          6.689,
+          "powers"
+        ],
+        [
+          7.119,
+          "collaboration"
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "slide": "S1",
+      "start": 8.664,
+      "end": 11.437,
+      "en": "And increasingly, knowledge powers AI.",
+      "zh": "而且，知识正越来越多地驱动 AI。",
+      "words": [
+        [
+          8.664,
+          "And"
+        ],
+        [
+          8.816,
+          "increasingly"
+        ],
+        [
+          9.832,
+          "knowledge"
+        ],
+        [
+          10.249,
+          "powers"
+        ],
+        [
+          10.73,
+          "AI"
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "slide": "S2",
+      "start": 13.03,
+      "end": 20.462,
+      "en": "Enterprise Knowledge Management helps Lenovo transform knowledge from scattered information into a trusted enterprise asset.",
+      "zh": "企业知识管理帮助联想转化知识，让零散的信息成为可信的企业资产。",
+      "words": [
+        [
+          13.03,
+          "Enterprise"
+        ],
+        [
+          13.665,
+          "Knowledge"
+        ],
+        [
+          14.121,
+          "Management"
+        ],
+        [
+          14.694,
+          "helps"
+        ],
+        [
+          15.02,
+          "Lenovo"
+        ],
+        [
+          15.566,
+          "transform"
+        ],
+        [
+          16.257,
+          "knowledge"
+        ],
+        [
+          16.738,
+          "from"
+        ],
+        [
+          16.934,
+          "scattered"
+        ],
+        [
+          17.428,
+          "information"
+        ],
+        [
+          18.171,
+          "into"
+        ],
+        [
+          18.457,
+          "a"
+        ],
+        [
+          18.548,
+          "trusted"
+        ],
+        [
+          19.082,
+          "enterprise"
+        ],
+        [
+          19.72,
+          "asset"
+        ]
+      ]
+    },
+    {
+      "i": 4,
+      "slide": "S2",
+      "start": 20.912,
+      "end": 30.477,
+      "en": "And the Enterprise Knowledge Platform provides the foundation that enables employees and AI to create, discover, share, and reuse knowledge at scale.",
+      "zh": "而企业知识平台提供了基础，让员工与 AI 能够大规模地创建、发现、共享和复用知识。",
+      "words": [
+        [
+          20.912,
+          "And"
+        ],
+        [
+          21.056,
+          "the"
+        ],
+        [
+          21.16,
+          "Enterprise"
+        ],
+        [
+          21.863,
+          "Knowledge"
+        ],
+        [
+          22.293,
+          "Platform"
+        ],
+        [
+          22.931,
+          "provides"
+        ],
+        [
+          23.439,
+          "the"
+        ],
+        [
+          23.556,
+          "foundation"
+        ],
+        [
+          24.233,
+          "that"
+        ],
+        [
+          24.389,
+          "enables"
+        ],
+        [
+          24.884,
+          "employees"
+        ],
+        [
+          25.6,
+          "and"
+        ],
+        [
+          25.887,
+          "AI"
+        ],
+        [
+          26.329,
+          "to"
+        ],
+        [
+          26.512,
+          "create"
+        ],
+        [
+          27.28,
+          "discover"
+        ],
+        [
+          28.048,
+          "share"
+        ],
+        [
+          28.777,
+          "and"
+        ],
+        [
+          28.921,
+          "reuse"
+        ],
+        [
+          29.35,
+          "knowledge"
+        ],
+        [
+          29.754,
+          "at"
+        ],
+        [
+          29.858,
+          "scale"
+        ]
+      ]
+    },
+    {
+      "i": 5,
+      "slide": "S3",
+      "start": 31.777,
+      "end": 36.832,
+      "en": "Together, we can build a culture where knowledge is not lost, duplicated, or hidden.",
+      "zh": "我们可以携手打造一种文化：知识不会丢失、重复或被埋没。",
+      "words": [
+        [
+          31.777,
+          "Together"
+        ],
+        [
+          32.525,
+          "we"
+        ],
+        [
+          32.656,
+          "can"
+        ],
+        [
+          32.851,
+          "build"
+        ],
+        [
+          33.111,
+          "a"
+        ],
+        [
+          33.176,
+          "culture"
+        ],
+        [
+          33.645,
+          "where"
+        ],
+        [
+          33.788,
+          "knowledge"
+        ],
+        [
+          34.231,
+          "is"
+        ],
+        [
+          34.348,
+          "not"
+        ],
+        [
+          34.635,
+          "lost"
+        ],
+        [
+          35.26,
+          "duplicated"
+        ],
+        [
+          36.106,
+          "or"
+        ],
+        [
+          36.275,
+          "hidden"
+        ]
+      ]
+    },
+    {
+      "i": 6,
+      "slide": "S3",
+      "start": 37.282,
+      "end": 45.038,
+      "en": "Instead, knowledge becomes a strategic advantage that helps Lenovo move faster, work smarter, and lead in the age of AI.",
+      "zh": "相反，知识会成为一项战略优势，帮助联想行动更快、工作更聪明，并在 AI 时代保持领先。",
+      "words": [
+        [
+          37.282,
+          "Instead"
+        ],
+        [
+          38.067,
+          "knowledge"
+        ],
+        [
+          38.535,
+          "becomes"
+        ],
+        [
+          38.965,
+          "a"
+        ],
+        [
+          39.043,
+          "strategic"
+        ],
+        [
+          39.681,
+          "advantage"
+        ],
+        [
+          40.306,
+          "that"
+        ],
+        [
+          40.436,
+          "helps"
+        ],
+        [
+          40.762,
+          "Lenovo"
+        ],
+        [
+          41.244,
+          "move"
+        ],
+        [
+          41.517,
+          "faster"
+        ],
+        [
+          42.337,
+          "work"
+        ],
+        [
+          42.598,
+          "smarter"
+        ],
+        [
+          43.327,
+          "and"
+        ],
+        [
+          43.496,
+          "lead"
+        ],
+        [
+          43.757,
+          "in"
+        ],
+        [
+          43.835,
+          "the"
+        ],
+        [
+          43.939,
+          "age"
+        ],
+        [
+          44.238,
+          "of"
+        ],
+        [
+          44.33,
+          "AI"
+        ]
+      ]
+    },
+    {
+      "i": 7,
+      "slide": "S4",
+      "start": 46.338,
+      "end": 48.065,
+      "en": "Knowledge powers AI.",
+      "zh": "知识驱动 AI。",
+      "words": [
+        [
+          46.338,
+          "Knowledge"
+        ],
+        [
+          46.817,
+          "powers"
+        ],
+        [
+          47.325,
+          "AI"
+        ]
+      ]
+    },
+    {
+      "i": 8,
+      "slide": "S4",
+      "start": 48.515,
+      "end": 50.714,
+      "en": "And every employee has a role to play.",
+      "zh": "而每一位员工都能发挥自己的作用。",
+      "words": [
+        [
+          48.515,
+          "And"
+        ],
+        [
+          48.751,
+          "every"
+        ],
+        [
+          49.011,
+          "employee"
+        ],
+        [
+          49.506,
+          "has"
+        ],
+        [
+          49.714,
+          "a"
+        ],
+        [
+          49.792,
+          "role"
+        ],
+        [
+          50.04,
+          "to"
+        ],
+        [
+          50.144,
+          "play"
+        ]
+      ]
+    },
+    {
+      "i": 9,
+      "slide": "S5",
+      "start": 52.844,
+      "end": 55.372,
+      "en": "Learn more about EKM and EKP:",
+      "zh": "了解更多关于 EKM 和 EKP 的信息：",
+      "words": [
+        [
+          52.844,
+          "Learn"
+        ],
+        [
+          53.128,
+          "more"
+        ],
+        [
+          53.389,
+          "about"
+        ],
+        [
+          53.727,
+          "EKM"
+        ],
+        [
+          54.313,
+          "and"
+        ],
+        [
+          54.483,
+          "EKP"
+        ]
+      ]
+    },
+    {
+      "i": 10,
+      "slide": "S5",
+      "start": 55.522,
+      "end": 57.213,
+      "en": "Additional training modules",
+      "zh": "更多培训模块",
+      "words": [
+        [
+          55.522,
+          "Additional"
+        ],
+        [
+          56.028,
+          "training"
+        ],
+        [
+          56.432,
+          "modules"
+        ]
+      ]
+    },
+    {
+      "i": 11,
+      "slide": "S5",
+      "start": 57.363,
+      "end": 58.972,
+      "en": "Link to Sharepoint site",
+      "zh": "SharePoint 站点链接",
+      "words": [
+        [
+          57.363,
+          "Link"
+        ],
+        [
+          57.674,
+          "to"
+        ],
+        [
+          57.778,
+          "Sharepoint"
+        ],
+        [
+          58.377,
+          "site"
+        ]
+      ]
+    }
+  ],
+  "subs": [
+    {
+      "i": 0,
+      "unit": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 5.749,
+      "en": "Knowledge powers decisions.",
+      "zh": "知识驱动决策。"
+    },
+    {
+      "i": 1,
+      "unit": 1,
+      "slide": "S1",
+      "start": 6.199,
+      "end": 8.214,
+      "en": "Knowledge powers collaboration.",
+      "zh": "知识驱动协作。"
+    },
+    {
+      "i": 2,
+      "unit": 2,
+      "slide": "S1",
+      "start": 8.664,
+      "end": 11.437,
+      "en": "And increasingly, knowledge powers AI.",
+      "zh": "而且，知识正越来越多地驱动 AI。"
+    },
+    {
+      "i": 3,
+      "unit": 3,
+      "slide": "S2",
+      "start": 13.03,
+      "end": 16.738,
+      "en": "Enterprise Knowledge Management helps Lenovo transform knowledge",
+      "zh": "企业知识管理帮助联想转化知识，"
+    },
+    {
+      "i": 4,
+      "unit": 3,
+      "slide": "S2",
+      "start": 16.738,
+      "end": 20.462,
+      "en": "from scattered information into a trusted enterprise asset.",
+      "zh": "让零散的信息成为可信的企业资产。"
+    },
+    {
+      "i": 5,
+      "unit": 4,
+      "slide": "S2",
+      "start": 20.912,
+      "end": 24.233,
+      "en": "And the Enterprise Knowledge Platform provides the foundation",
+      "zh": "而企业知识平台提供了基础，"
+    },
+    {
+      "i": 6,
+      "unit": 4,
+      "slide": "S2",
+      "start": 24.233,
+      "end": 30.477,
+      "en": "that enables employees and AI to create, discover, share, and reuse knowledge at scale.",
+      "zh": "让员工与 AI 能够大规模地创建、发现、共享和复用知识。"
+    },
+    {
+      "i": 7,
+      "unit": 5,
+      "slide": "S3",
+      "start": 31.777,
+      "end": 36.832,
+      "en": "Together, we can build a culture where knowledge is not lost, duplicated, or hidden.",
+      "zh": "我们可以携手打造一种文化：知识不会丢失、重复或被埋没。"
+    },
+    {
+      "i": 8,
+      "unit": 6,
+      "slide": "S3",
+      "start": 37.282,
+      "end": 40.306,
+      "en": "Instead, knowledge becomes a strategic advantage",
+      "zh": "相反，知识会成为一项战略优势，"
+    },
+    {
+      "i": 9,
+      "unit": 6,
+      "slide": "S3",
+      "start": 40.306,
+      "end": 45.038,
+      "en": "that helps Lenovo move faster, work smarter, and lead in the age of AI.",
+      "zh": "帮助联想行动更快、工作更聪明，并在 AI 时代保持领先。"
+    },
+    {
+      "i": 10,
+      "unit": 7,
+      "slide": "S4",
+      "start": 46.338,
+      "end": 48.065,
+      "en": "Knowledge powers AI.",
+      "zh": "知识驱动 AI。"
+    },
+    {
+      "i": 11,
+      "unit": 8,
+      "slide": "S4",
+      "start": 48.515,
+      "end": 50.714,
+      "en": "And every employee has a role to play.",
+      "zh": "而每一位员工都能发挥自己的作用。"
+    },
+    {
+      "i": 12,
+      "unit": 9,
+      "slide": "S5",
+      "start": 52.844,
+      "end": 55.372,
+      "en": "Learn more about EKM and EKP:",
+      "zh": "了解更多关于 EKM 和 EKP 的信息："
+    },
+    {
+      "i": 13,
+      "unit": 10,
+      "slide": "S5",
+      "start": 55.522,
+      "end": 57.213,
+      "en": "Additional training modules",
+      "zh": "更多培训模块"
+    },
+    {
+      "i": 14,
+      "unit": 11,
+      "slide": "S5",
+      "start": 57.363,
+      "end": 58.972,
+      "en": "Link to Sharepoint site",
+      "zh": "SharePoint 站点链接"
+    }
+  ]
+}

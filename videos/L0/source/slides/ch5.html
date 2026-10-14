@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chapter 5 — Powering AI at Lenovo</title>
+<link rel="stylesheet" href="../../../../engine/engine.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 chapter card -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.3"><circle cx="770" cy="400" r="34" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.35"><circle cx="1150" cy="400" r="34" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.4" data-dur="1.0" points="770,400 960,250 1150,400" fill="none" stroke="#fff" stroke-width="2.5" pathLength="1"/>
+      <g class="a breathe" data-at="s+0.2"><circle cx="960" cy="360" r="78" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.4"><circle cx="960" cy="360" r="118" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="4 10" class="spin"/></g>
+      <g class="a" data-at="s+0.45"><text x="960" y="381" text-anchor="middle" class="svgtext" font-size="60">05</text></g>
+      <g class="a" data-at="s+1.0" data-icon="sparkles" data-x="560" data-y="330" data-s="130"></g>
+      <g class="a" data-at="s+1.1" data-icon="sparkles" data-x="1370" data-y="300" data-s="100"></g>
+    </svg>
+    <div class="card-kicker a" data-at="s+0.6">CHAPTER 5</div>
+    <div class="card-title a" data-at="s+0.8">Powering AI at Lenovo</div>
+    <div class="card-rule a" data-at="s+1.1" data-kind="scalex"></div>
+  </section>
+
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">An AI-Ready Asset</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">A More Connected Organization</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+
+</div>
+<script src="../../build/timelines/timeline_ch5.js"></script>
+<script src="../../../../engine/engine.js"></script>
+<script>
+const { el, div, node, pill, line, bracket, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+const stream = (svg, d, at, id) => {
+  el("path", { id, d, fill: "none", stroke: "rgba(255,255,255,.45)", "stroke-width": 2, pathLength: 1, class: "draw", "data-at": at, "data-dur": "0.9" }, svg);
+  el("path", { d, fill: "none", stroke: R, "stroke-width": 4, "stroke-linecap": "round", "stroke-dasharray": "0.04 0.2",
+    pathLength: 1, class: "stream", "data-at": at + "+0.6", filter: "url(#glowSoft)" }, svg);
+};
+const dot = (svg, path, at, dur = 0.8, r = 8) => el("circle", { cx: 0, cy: 0, r, fill: "#fff", filter: "url(#glowDot)", class: "travel",
+  "data-path": path, "data-at": at, "data-dur": dur }, svg);
+const pulse = (svg, x, y, r0, at, dur = 0.9) => el("circle", { cx: x, cy: y, r: r0, fill: "none", stroke: R, "stroke-width": 2, class: "pulse",
+  "data-r0": r0, "data-at": at, "data-dur": dur }, svg);
+
+// ---------- S1: trusted knowledge becomes an AI-ready asset; the right information reaches every employee and every AI agent ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c"), src = [470, 560], mid = 985, emp = [1520, 380], agent = [1520, 740];
+  el("circle", { cx: src[0], cy: src[1], r: 140, fill: "none", stroke: "rgba(255,255,255,.35)", "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" },
+     el("g", { class: "a", "data-at": "u0@trusted" }, svg));
+  // trusted knowledge (purple) hands over to the AI-ready asset (red)
+  node(svg, html, { x: src[0], y: src[1], r: 110, fill: PURPLE, icon: "layers", iconSize: 115, at: "u0@trusted", out: "u0@AI-ready",
+    label: "Trusted Knowledge", labelGap: 44 });
+  node(svg, html, { x: src[0], y: src[1], r: 110, fill: R, glow: true, breathe: true, icon: "chip", iconSize: 120, at: "u0@AI-ready",
+    label: "AI-Ready Asset", labelGap: 44, labelAt: "u0@asset" });
+  pulse(svg, src[0], src[1], 110, "u0@asset", 1.0);
+  // the right information, exactly when it's needed
+  stream(svg, `M${src[0] + 145} ${src[1]} L ${mid - 222} ${src[1]}`, "u0@right-0.2", "S1a");
+  pill(html, { text: "Right Information", x: mid - 210, y: src[1] - 31, w: 420, sm: true, at: "u0@right" });
+  pill(html, { text: "Exactly When It's Needed", x: mid - 210, y: src[1] + 70, w: 420, sm: true, red: true, at: "u0@exactly" });
+  el("g", { class: "a", "data-at": "u0@exactly-0.1", "data-icon": "clock", "data-x": mid, "data-y": src[1] + 180, "data-s": 64 }, svg);
+  // branches to the two receivers
+  [[emp, "employee", "S1e"], [agent, "Agent", "S1g"]].forEach(([[x, y], word, id]) => {
+    const d = `M${mid + 222} ${src[1]} C ${mid + 360} ${src[1]}, ${x - 220} ${y}, ${x - 88} ${y}`;
+    stream(svg, d, `u0@${word}-0.3`, id);
+    dot(svg, id, `u0@needed+${id === "S1e" ? 0 : 0.25}`, 0.9);
+    pulse(svg, x, y, 72, `u0@needed+${id === "S1e" ? 0.9 : 1.15}`);
+  });
+  node(svg, html, { x: emp[0], y: emp[1], r: 72, fill: PURPLE, icon: "person", iconSize: 80, at: "u0@employee", label: "Every Employee", labelPos: "above" });
+  node(svg, html, { x: agent[0], y: agent[1], r: 72, fill: BLUE, icon: "chip", iconSize: 80, at: "u0@Agent", label: "Every AI Agent" });
+});
+
+// ---------- S2: a smarter, more connected organization; knowledge flows, decisions happen faster ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c"), hub = [980, 470];
+  const N = [[560, 330, 30, "person"], [760, 280, 22], [1200, 280, 24], [1400, 340, 30, "doc"], [470, 520, 22], [700, 470, 34, "chip"],
+             [1260, 460, 34, "person"], [1520, 520, 22], [600, 650, 26, "doc"], [830, 640, 22], [1130, 650, 22], [1380, 650, 30, "chip"]];
+  const E = [[0, 1], [0, 4], [0, 5], [1, 5], [1, 2], [2, 3], [2, 6], [3, 6], [3, 7], [4, 5], [4, 8], [5, 8], [5, 9], [6, 7], [6, 10], [6, 11],
+             [7, 11], [8, 9], [9, 10], [10, 11]];
+  // edges between colleagues, then spokes to the hub ("more connected")
+  E.forEach(([a, b], k) => el("path", { id: `S2e${k}`, d: `M${N[a][0]} ${N[a][1]} L ${N[b][0]} ${N[b][1]}`, fill: "none", stroke: "rgba(255,255,255,.35)",
+    "stroke-width": 1.5, pathLength: 1, class: "draw", "data-at": `u1@connected+${(k * 0.04).toFixed(2)}`, "data-dur": "0.5" }, svg));
+  [0, 2, 5, 6, 9, 10].forEach((k, i) => el("path", { id: `S2h${k}`, d: `M${N[k][0]} ${N[k][1]} L ${hub[0]} ${hub[1]}`, fill: "none", stroke: "rgba(233,58,58,.6)",
+    "stroke-width": 2, pathLength: 1, class: "draw", "data-at": `u1@organization+${(i * 0.06).toFixed(2)}`, "data-dur": "0.5" }, svg));
+  el("circle", { cx: hub[0], cy: hub[1], r: 112, fill: "none", stroke: "rgba(255,255,255,.3)", "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" },
+     el("g", { class: "a", "data-at": "u1@smarter+0.2" }, svg));
+  node(svg, html, { x: hub[0], y: hub[1], r: 84, fill: R, glow: true, breathe: true, icon: "network", iconSize: 96, at: "u1@smarter" });
+  N.forEach(([x, y, r, icon], k) => {
+    const at = `u1@building+${(k * 0.07).toFixed(2)}`;
+    if (icon) node(svg, null, { x, y, r, fill: k % 2 ? BLUE : PURPLE, icon, iconSize: r * 1.25, at, drift: k });
+    else el("circle", { cx: x, cy: y, r: r * 0.55, fill: k % 2 ? BLUE : PURPLE, stroke: "rgba(255,255,255,.6)", "stroke-width": 1.5, class: "a", "data-at": at }, svg);
+  });
+  // knowledge flows freely: dots along the edges
+  [0, 4, 6, 11, 13, 16, 18, 2].forEach((k, i) => dot(svg, `S2e${k}`, `u1@flows+${(i * 0.18).toFixed(2)}`, 0.9, 6));
+  // intelligent decisions happen faster: decision points light up in quick succession
+  [5, 6, 11, 0, 8, 3].forEach((k, i) => {
+    const at = `u1@decisions+${(i * 0.14).toFixed(2)}`;
+    el("circle", { cx: N[k][0], cy: N[k][1], r: N[k][2] + 4, fill: "none", stroke: R, "stroke-width": 3, filter: "url(#glowDot)", class: "a", "data-at": at, "data-dur": "0.3" }, svg);
+    pulse(svg, N[k][0], N[k][1], N[k][2] + 4, at, 0.8);
+  });
+  pill(html, { text: "Knowledge Flows Freely", x: 480, y: 742, w: 440, sm: true, left: true, dot: true, at: "u1@flows" });
+  pill(html, { text: "Intelligent Decisions, Faster", x: 1040, y: 742, w: 440, sm: true, left: true, dot: true, at: "u1@faster" });
+  // the model for a Knowledge + AI-driven future
+  el("g", { class: "a", "data-at": "u2@model", "data-icon": "rocket", "data-x": 650, "data-y": 860, "data-s": 70 }, svg);
+  pill(html, { text: "Knowledge + AI-Driven Future", x: 720, y: 829, w: 520, red: false, sm: true, at: "u2@Knowledge" }).classList.add("red");
+  el("g", { class: "a", "data-at": "u2@future", "data-icon": "sparkles", "data-x": 1310, "data-y": 860, "data-s": 70 }, svg);
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>

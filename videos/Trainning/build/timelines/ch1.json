@@ -1,0 +1,324 @@
+{
+  "section": "ch1",
+  "duration": 24.539,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 1 · Each Section Is a Web Page",
+      "start": 0.0,
+      "end": 3.5
+    },
+    {
+      "id": "S1",
+      "title": "Just Like a Slide",
+      "start": 3.5,
+      "end": 12.494
+    },
+    {
+      "id": "S2",
+      "title": "Same Time, Same Picture",
+      "start": 12.494,
+      "end": 24.539
+    }
+  ],
+  "units": [
+    {
+      "i": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 6.503,
+      "en": "Each section of the video is a web page.",
+      "zh": "视频的每一段都是一个网页。",
+      "words": [
+        [
+          4.0,
+          "Each"
+        ],
+        [
+          4.237,
+          "section"
+        ],
+        [
+          4.693,
+          "of"
+        ],
+        [
+          4.797,
+          "the"
+        ],
+        [
+          4.927,
+          "video"
+        ],
+        [
+          5.396,
+          "is"
+        ],
+        [
+          5.552,
+          "a"
+        ],
+        [
+          5.656,
+          "web"
+        ],
+        [
+          5.917,
+          "page"
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "slide": "S1",
+      "start": 6.953,
+      "end": 11.609,
+      "en": "Circles, lines, labels, and subtitles are placed on it, just like on a slide.",
+      "zh": "圆、线、标签和字幕都摆在上面，就像一页幻灯片。",
+      "words": [
+        [
+          6.953,
+          "Circles"
+        ],
+        [
+          7.596,
+          "lines"
+        ],
+        [
+          8.13,
+          "labels"
+        ],
+        [
+          8.69,
+          "and"
+        ],
+        [
+          8.794,
+          "subtitles"
+        ],
+        [
+          9.471,
+          "are"
+        ],
+        [
+          9.575,
+          "placed"
+        ],
+        [
+          9.927,
+          "on"
+        ],
+        [
+          10.07,
+          "it"
+        ],
+        [
+          10.382,
+          "just"
+        ],
+        [
+          10.604,
+          "like"
+        ],
+        [
+          10.786,
+          "on"
+        ],
+        [
+          10.929,
+          "a"
+        ],
+        [
+          10.994,
+          "slide"
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "slide": "S2",
+      "start": 12.994,
+      "end": 16.542,
+      "en": "Ask the page for any moment, say 12.5 seconds,",
+      "zh": "随便问网页一个时间点，比如 12.5 秒，",
+      "words": [
+        [
+          12.994,
+          "Ask"
+        ],
+        [
+          13.258,
+          "the"
+        ],
+        [
+          13.375,
+          "page"
+        ],
+        [
+          13.674,
+          "for"
+        ],
+        [
+          13.857,
+          "any"
+        ],
+        [
+          14.052,
+          "moment"
+        ],
+        [
+          14.677,
+          "say"
+        ],
+        [
+          14.885,
+          "12.5 seconds"
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "slide": "S2",
+      "start": 16.692,
+      "end": 19.314,
+      "en": "and it draws exactly what should be on screen.",
+      "zh": "它就画出那一刻屏幕上该有的画面。",
+      "words": [
+        [
+          16.692,
+          "and"
+        ],
+        [
+          16.825,
+          "it"
+        ],
+        [
+          16.929,
+          "draws"
+        ],
+        [
+          17.319,
+          "exactly"
+        ],
+        [
+          17.944,
+          "what"
+        ],
+        [
+          18.14,
+          "should"
+        ],
+        [
+          18.348,
+          "be"
+        ],
+        [
+          18.517,
+          "on"
+        ],
+        [
+          18.661,
+          "screen"
+        ]
+      ]
+    },
+    {
+      "i": 4,
+      "slide": "S2",
+      "start": 19.764,
+      "end": 22.172,
+      "en": "The same time always gives the same picture.",
+      "zh": "同一个时间，永远得到同一张画面。",
+      "words": [
+        [
+          19.764,
+          "The"
+        ],
+        [
+          19.872,
+          "same"
+        ],
+        [
+          20.145,
+          "time"
+        ],
+        [
+          20.432,
+          "always"
+        ],
+        [
+          20.862,
+          "gives"
+        ],
+        [
+          21.122,
+          "the"
+        ],
+        [
+          21.239,
+          "same"
+        ],
+        [
+          21.539,
+          "picture"
+        ]
+      ]
+    }
+  ],
+  "subs": [
+    {
+      "i": 0,
+      "unit": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 6.503,
+      "en": "Each section of the video is a web page.",
+      "zh": "视频的每一段都是一个网页。"
+    },
+    {
+      "i": 1,
+      "unit": 1,
+      "slide": "S1",
+      "start": 6.953,
+      "end": 9.471,
+      "en": "Circles, lines, labels, and subtitles",
+      "zh": "圆、线、标签和字幕"
+    },
+    {
+      "i": 2,
+      "unit": 1,
+      "slide": "S1",
+      "start": 9.471,
+      "end": 11.609,
+      "en": "are placed on it, just like on a slide.",
+      "zh": "都摆在上面，就像一页幻灯片。"
+    },
+    {
+      "i": 3,
+      "unit": 2,
+      "slide": "S2",
+      "start": 12.994,
+      "end": 16.542,
+      "en": "Ask the page for any moment, say 12.5 seconds,",
+      "zh": "随便问网页一个时间点，比如 12.5 秒，"
+    },
+    {
+      "i": 4,
+      "unit": 3,
+      "slide": "S2",
+      "start": 16.692,
+      "end": 19.314,
+      "en": "and it draws exactly what should be on screen.",
+      "zh": "它就画出那一刻屏幕上该有的画面。"
+    },
+    {
+      "i": 5,
+      "unit": 4,
+      "slide": "S2",
+      "start": 19.764,
+      "end": 22.172,
+      "en": "The same time always gives the same picture.",
+      "zh": "同一个时间，永远得到同一张画面。"
+    }
+  ]
+}

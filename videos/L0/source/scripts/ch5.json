@@ -1,0 +1,46 @@
+{
+  "section": "ch5",
+  "voice": "en-US-AriaNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 5 · Powering AI at Lenovo"
+    },
+    {
+      "id": "S1",
+      "title": "An AI-Ready Asset"
+    },
+    {
+      "id": "S2",
+      "title": "A More Connected Organization"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "By turning our trusted knowledge into an AI-ready asset, | we put the right information in the hands of every employee — | and every AI Agent — exactly when it's needed.",
+      "zh": "通过把可信知识转化为 AI 就绪的资产，| 我们把正确的信息交到每一位员工手中——| 也交给每一个 AI 智能体——在需要的时候恰好送达。",
+      "hold": {
+        "after": "needed",
+        "seconds": 2.0
+      }
+    },
+    {
+      "slide": "S2",
+      "en": "Together, we're building a smarter, more connected organization | where knowledge flows freely and intelligent decisions happen faster.",
+      "zh": "我们正携手打造一个更智能、联系更紧密的组织，| 让知识自由流动，让明智的决策更快发生。"
+    },
+    {
+      "slide": "S2",
+      "en": "Let's make Lenovo the model for a Knowledge + AI-Driven future.",
+      "zh": "让我们把联想打造成知识 + AI 驱动未来的典范。",
+      "hold": {
+        "after": "future",
+        "seconds": 2.4
+      }
+    }
+  ],
+  "source_text": "By turning our trusted knowledge into an AI-ready asset, we put the right information in the hands of every employee — and every AI Agent — exactly when it's needed. Together, we're building a smarter, more connected organization where knowledge flows freely and intelligent decisions happen faster. Let's make Lenovo the model for a Knowledge + AI-Driven future."
+}

@@ -1,0 +1,63 @@
+{
+  "section": "ch3",
+  "voice": "en-US-GuyNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 3 · Pictures Become a Video"
+    },
+    {
+      "id": "S1",
+      "title": "A Screenshot at Every Step"
+    },
+    {
+      "id": "S2",
+      "title": "One Track Under the Whole Film"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "A browser opens the page and moves forward one thirtieth of a second at a time.",
+      "zh": "浏览器打开网页，每次往前走三十分之一秒。"
+    },
+    {
+      "slide": "S1",
+      "en": "At every step, it takes a screenshot.",
+      "zh": "每走一步，就截一张图。"
+    },
+    {
+      "slide": "S1",
+      "en": "Eight browsers work side by side, | and the pictures become a video with sound.",
+      "zh": "八个浏览器同时工作，| 这些图片就变成了一段有声音的视频。",
+      "hold": {
+        "after": "sound",
+        "seconds": 1.5
+      }
+    },
+    {
+      "slide": "S2",
+      "en": "Finally, all the sections are joined in order.",
+      "zh": "最后，所有段落按顺序拼接起来。"
+    },
+    {
+      "slide": "S2",
+      "en": "One music track plays under the whole film, | and it softens whenever the voice speaks.",
+      "zh": "一条背景音乐铺满整部影片，| 每当旁白说话时，它就自动变轻。",
+      "hold": {
+        "after": "speaks",
+        "seconds": 1.5
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "kind": "ding",
+      "at": "u2@video",
+      "pitch": 1568
+    }
+  ],
+  "source_text": "A browser opens the page and moves forward one thirtieth of a second at a time. At every step, it takes a screenshot. Eight browsers work side by side, and the pictures become a video with sound. Finally, all the sections are joined in order. One music track plays under the whole film, and it softens whenever the voice speaks."
+}

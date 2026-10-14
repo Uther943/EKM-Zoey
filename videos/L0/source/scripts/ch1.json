@@ -1,0 +1,102 @@
+{
+  "section": "ch1",
+  "voice": "en-US-AriaNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CHAPTER 1 · What is Knowledge Management?"
+    },
+    {
+      "id": "S1",
+      "title": "Knowledge Management (KM)"
+    },
+    {
+      "id": "S2",
+      "title": "What KM Ensures"
+    },
+    {
+      "id": "S3",
+      "title": "Shared, Not Isolated"
+    },
+    {
+      "id": "S4",
+      "title": "A Strategic Enterprise Asset"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "Knowledge Management, or KM, is the practice of creating, organizing, | sharing, governing, and reusing knowledge across an organization.",
+      "zh": "知识管理（简称 KM），是在整个组织中创造、组织、| 共享、治理和复用知识的实践。",
+      "hold": {
+        "after": "across",
+        "seconds": 6.1
+      }
+    },
+    {
+      "slide": "S2",
+      "en": "At its core, Knowledge Management helps ensure that valuable information is:",
+      "zh": "从本质上讲，知识管理有助于确保有价值的信息："
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Easy to find",
+      "zh": "易于查找"
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Accurate and trustworthy",
+      "zh": "准确可信"
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Reusable by others",
+      "zh": "可被他人复用"
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Maintained over time",
+      "zh": "持续得到维护"
+    },
+    {
+      "slide": "S2",
+      "list": true,
+      "en": "Available when people need it",
+      "zh": "在需要时随时可用"
+    },
+    {
+      "slide": "S3",
+      "en": "Knowledge becomes a strategic business asset | when it can be shared and leveraged across teams | rather than remaining isolated within individuals or departments.",
+      "zh": "知识会成为一项战略性业务资产，| 前提是它能够在团队之间共享和利用，| 而不是孤立地留在个人或部门之中。"
+    },
+    {
+      "slide": "S4",
+      "en": "Effective Knowledge Management transforms knowledge into a strategic enterprise asset | by reducing duplication, improving decision-making, accelerating onboarding, | enabling faster access to information, and powering AI with trusted, governed knowledge.",
+      "zh": "有效的知识管理将知识转化为战略性企业资产：| 减少重复工作、改善决策、加快新员工上手，| 让信息获取更快，并以可信、受治理的知识赋能 AI。"
+    }
+  ],
+  "source_text": "Knowledge Management, or KM, is the practice of creating, organizing, sharing, governing, and reusing knowledge across an organization. At its core, Knowledge Management helps ensure that valuable information is: Easy to find Accurate and trustworthy Reusable by others Maintained over time Available when people need it Knowledge becomes a strategic business asset when it can be shared and leveraged across teams rather than remaining isolated within individuals or departments. Effective Knowledge Management transforms knowledge into a strategic enterprise asset by reducing duplication, improving decision-making, accelerating onboarding, enabling faster access to information, and powering AI with trusted, governed knowledge.",
+  "sfx": [
+    {
+      "kind": "ding",
+      "at": "u0@across+2.5",
+      "pitch": 1568
+    },
+    {
+      "kind": "ding",
+      "at": "u0@across+3.3",
+      "pitch": 1760
+    },
+    {
+      "kind": "ding",
+      "at": "u0@across+4.1",
+      "pitch": 2093
+    }
+  ]
+}

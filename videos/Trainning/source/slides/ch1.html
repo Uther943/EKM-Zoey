@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chapter 1 — Each Section Is a Web Page</title>
+<link rel="stylesheet" href="../../../../engine/engine.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 chapter card -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.3"><circle cx="770" cy="400" r="34" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.35"><circle cx="1150" cy="400" r="34" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.4" data-dur="1.0" points="770,400 960,250 1150,400" fill="none" stroke="#fff" stroke-width="2.5" pathLength="1"/>
+      <g class="a breathe" data-at="s+0.2"><circle cx="960" cy="360" r="78" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.4"><circle cx="960" cy="360" r="118" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="4 10" class="spin"/></g>
+      <g class="a" data-at="s+0.45"><text x="960" y="381" text-anchor="middle" class="svgtext" font-size="60">01</text></g>
+      <g class="a" data-at="s+1.0" data-icon="sparkles" data-x="560" data-y="330" data-s="130"></g>
+      <g class="a" data-at="s+1.1" data-icon="sparkles" data-x="1370" data-y="300" data-s="100"></g>
+    </svg>
+    <div class="card-kicker a" data-at="s+0.6">CHAPTER 1</div>
+    <div class="card-title a" data-at="s+0.8">Each Section Is a Web Page</div>
+    <div class="card-rule a" data-at="s+1.1" data-kind="scalex"></div>
+  </section>
+
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Just Like a Slide</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Same Time, Same Picture</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+</div>
+<script src="../../build/timelines/timeline_ch1.js"></script>
+<script src="../../../../engine/engine.js"></script>
+<script>
+const { el, div, node, pill, line, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+const svgText = (svg, x, y, text, size, at, fill) => {
+  const t = el("text", { x, y, "text-anchor": "middle", class: "svgtext a", "font-size": size, "data-at": at }, svg);
+  t.textContent = text; if (fill) t.style.fill = fill; return t;
+};
+// a browser window: frame + top bar with three dots and an address bar
+const browser = (svg, x, y, w, h, at) => {
+  const g = el("g", { class: "a", "data-at": at }, svg);
+  el("rect", { x, y, width: w, height: h, rx: 18, fill: "rgba(255,255,255,.05)", stroke: "rgba(255,255,255,.45)", "stroke-width": 2 }, g);
+  el("line", { x1: x, y1: y + 46, x2: x + w, y2: y + 46, stroke: "rgba(255,255,255,.3)", "stroke-width": 1.5 }, g);
+  [0, 1, 2].forEach(i => el("circle", { cx: x + 28 + i * 24, cy: y + 23, r: 7, fill: i ? "rgba(255,255,255,.5)" : R }, g));
+  el("rect", { x: x + 120, y: y + 12, width: Math.min(420, w - 180), height: 22, rx: 11, fill: "rgba(255,255,255,.12)" }, g);
+  return g;
+};
+// a tiny scene inside a frame (the same picture every time)
+const miniScene = (svg, x, y, w, h, at) => {
+  const g = el("g", { class: "a", "data-at": at }, svg);
+  el("rect", { x, y, width: w, height: h, rx: 14, fill: "rgba(10,10,15,.55)", stroke: "rgba(255,255,255,.45)", "stroke-width": 2 }, g);
+  const cx = x + w / 2, cy = y + h * 0.42;
+  el("line", { x1: cx - w * 0.28, y1: cy + 18, x2: cx, y2: cy, stroke: "#fff", "stroke-width": 2 }, g);
+  el("line", { x1: cx, y1: cy, x2: cx + w * 0.28, y2: cy - 18, stroke: "#fff", "stroke-width": 2 }, g);
+  el("circle", { cx: cx - w * 0.28, cy: cy + 18, r: h * 0.09, fill: PURPLE, stroke: "rgba(255,255,255,.5)", "stroke-width": 1.5 }, g);
+  el("circle", { cx: cx + w * 0.28, cy: cy - 18, r: h * 0.09, fill: BLUE, stroke: "rgba(255,255,255,.5)", "stroke-width": 1.5 }, g);
+  el("circle", { cx, cy, r: h * 0.15, fill: R, filter: "url(#glowSoft)" }, g);
+  el("rect", { x: cx - w * 0.25, y: y + h * 0.76, width: w * 0.5, height: 8, rx: 4, fill: "rgba(255,255,255,.75)" }, g);
+  el("rect", { x: cx - w * 0.17, y: y + h * 0.76 + 15, width: w * 0.34, height: 6, rx: 3, fill: "rgba(255,255,255,.45)" }, g);
+  return g;
+};
+
+// ---------- S1: a section is a web page; circles, lines, labels and subtitles are placed on it ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c");
+  node(svg, html, { x: 380, y: 520, r: 80, fill: PURPLE, icon: "site", iconSize: 96, label: "Each Section", at: "u0@section" });
+  const d = "M462 520 L 636 520";
+  el("path", { id: "S1go", d, fill: "none", stroke: "rgba(255,255,255,.6)", "stroke-width": 2, pathLength: 1, class: "draw",
+    "data-at": "u0@web-0.3", "data-dur": "0.5" }, svg);
+  el("circle", { cx: 0, cy: 0, r: 8, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": "S1go",
+    "data-at": "u0@web-0.3", "data-dur": "0.5" }, svg);
+  // the page itself
+  const bx = 660, by = 270, bw = 1000, bh = 520;
+  browser(svg, bx, by, bw, bh, "u0@web");
+  pill(html, { text: "A Web Page", x: bx + bw - 250, y: by + 64, w: 220, sm: true, at: "u0@page" });
+  // the parts arrive one by one as they are named
+  const c = [[900, 560, 56, PURPLE], [1160, 470, 78, R], [1420, 580, 56, BLUE]];
+  const lineAt = "u1@lines", circAt = "u1@Circles";
+  el("line", { x1: c[0][0], y1: c[0][1], x2: c[1][0], y2: c[1][1], stroke: "#fff", "stroke-width": 2.5, pathLength: 1, class: "draw", "data-at": lineAt }, svg);
+  el("line", { x1: c[1][0], y1: c[1][1], x2: c[2][0], y2: c[2][1], stroke: "#fff", "stroke-width": 2.5, pathLength: 1, class: "draw", "data-at": lineAt + "+0.15" }, svg);
+  c.forEach(([x, y, r, fill], i) => node(svg, html, { x, y, r, fill, glow: fill === R, breathe: fill === R, at: `${circAt}+${(i * 0.12).toFixed(2)}` }));
+  [["Circle", 900, 630], ["Label", 1420, 650]].forEach(([t, x, y], i) =>
+    div("nlabel a", t, { left: x + "px", top: y + "px" }, html, { at: `u1@labels+${(i * 0.15).toFixed(2)}` }));
+  // subtitles at the bottom of the page
+  el("rect", { x: 960, y: 712, width: 400, height: 12, rx: 6, fill: "rgba(255,255,255,.8)", class: "a", "data-at": "u1@subtitles" }, svg);
+  el("rect", { x: 1010, y: 734, width: 300, height: 9, rx: 4.5, fill: "rgba(255,255,255,.5)", class: "a", "data-at": "u1@subtitles+0.1" }, svg);
+  pill(html, { text: "Just Like a Slide", x: 230, y: 700, w: 300, sm: true, red: true, at: "u1@slide" });
+  el("g", { class: "a", "data-at": "u1@slide+0.3", "data-icon": "sparkles", "data-x": 1720, "data-y": 300, "data-s": 100 }, svg);
+});
+
+// ---------- S2: ask for any moment (12.5 s) and the page draws that frame; the same time, the same picture ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c"), ax = [300, 1640], ay = 380, T = 20;
+  const xAt = s => ax[0] + (ax[1] - ax[0]) * s / T;
+  line(svg, { x1: ax[0], y1: ay, x2: ax[1], y2: ay, at: "u2@moment-0.3", w: 2.5, dur: 0.8 });
+  [0, 5, 10, 15, 20].forEach((s, i) => {
+    el("circle", { cx: xAt(s), cy: ay, r: 6, fill: "#fff", class: "a", "data-at": `u2@moment+${(i * 0.08).toFixed(2)}` }, svg);
+    svgText(svg, xAt(s), ay + 44, s + "s", 24, `u2@moment+${(i * 0.08).toFixed(2)}`, "rgba(255,255,255,.8)");
+  });
+  // the asked moment
+  const mx = xAt(12.5);
+  el("circle", { cx: mx, cy: ay, r: 11, fill: R, filter: "url(#glowDot)", class: "a", "data-at": "u2f0.7" }, svg);
+  el("circle", { cx: mx, cy: ay, r: 11, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": 11, "data-at": "u2f0.7", "data-dur": "0.9" }, svg);
+  pill(html, { text: "12.5 Seconds", x: mx - 120, y: 270, w: 240, sm: true, red: true, at: "u2f0.7" });
+  // it draws what should be on screen
+  const A = [560, 520, 400, 225], B = [1180, 520, 400, 225];
+  const dash = { fill: "none", stroke: "rgba(255,255,255,.55)", "stroke-width": 2, "stroke-dasharray": "0.02 0.015", pathLength: 1, class: "draw" };
+  el("path", { ...dash, d: `M${mx} ${ay + 14} L ${A[0] + A[2] / 2} ${A[1] - 6}`, "data-at": "u3@draws-0.3", "data-dur": "0.6" }, svg);
+  miniScene(svg, ...A, "u3@draws");
+  // the same time again: the same picture
+  el("path", { ...dash, d: `M${mx} ${ay + 14} L ${B[0] + B[2] / 2} ${B[1] - 6}`, "data-at": "u4@same-0.2", "data-dur": "0.6" }, svg);
+  miniScene(svg, ...B, "u4@time");
+  svgText(svg, (A[0] + A[2] + B[0]) / 2, A[1] + A[3] / 2 + 24, "=", 72, "u4@always");
+  pill(html, { text: "Always the Same Picture", x: 960 - 230, y: 790, w: 460, sm: true, at: "u4@picture" });
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>

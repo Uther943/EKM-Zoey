@@ -1,0 +1,66 @@
+{
+  "section": "closing",
+  "voice": "en-US-GuyNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CLOSING · Written, Told, and Built"
+    },
+    {
+      "id": "S1",
+      "title": "Just Edit the Script"
+    },
+    {
+      "id": "S2",
+      "title": "Code Checks the Layout"
+    },
+    {
+      "id": "S3",
+      "title": "Written, Told, and Built"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "Want to change a sentence? Just edit the script and run it again.",
+      "zh": "想改一句话？只要改文稿，再跑一遍。"
+    },
+    {
+      "slide": "S1",
+      "en": "The voice, timing, and pictures all update together.",
+      "zh": "配音、时间和画面会一起更新。",
+      "hold": {
+        "after": "together",
+        "seconds": 1.5
+      }
+    },
+    {
+      "slide": "S2",
+      "en": "Before rendering, code checks the layout: | nothing overlaps, and nothing leaves the screen.",
+      "zh": "渲染之前，代码会检查版面：| 没有重叠，也没有超出画面。",
+      "hold": {
+        "after": "screen",
+        "seconds": 1.5
+      }
+    },
+    {
+      "slide": "S3",
+      "en": "That is how a script becomes a video: | written as words, told by a voice, and built with code.",
+      "zh": "这就是一份文稿变成视频的过程：| 用文字写成，由声音讲述，用代码搭建。",
+      "hold": {
+        "after": "code",
+        "seconds": 2.5
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "kind": "ding",
+      "at": "u3@code+0.8",
+      "pitch": 1760
+    }
+  ],
+  "source_text": "Want to change a sentence? Just edit the script and run it again. The voice, timing, and pictures all update together. Before rendering, code checks the layout: nothing overlaps, and nothing leaves the screen. That is how a script becomes a video: written as words, told by a voice, and built with code."
+}

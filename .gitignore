@@ -1,0 +1,31 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+
+# ---- OS / editor ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.claude/settings.local.json
+
+# ---- videos and large audio: rendered output, all rebuildable from source/ (see README §4) ----
+*.mp4
+*.wav
+# the chapter transition sound is a hand-picked source file (sfx.py TR_FILE); regenerating it gives different noise
+!library/transition/orig_low_v1.wav
+
+# ---- per-video generated folders ----
+videos/*/output/
+videos/*/build/bgm/
+videos/*/build/preview/
+videos/*/build/_seg/
+# kept from build/: timelines/ (small) and audio/units/**/*.mp3 (L0 has voices the tts cache lacks)
+
+# ---- transition sound previews ----
+library/transition/preview/
+
+# ---- experiments: generated audio / video / frames ----
+videos/*/experiments/*/out/
+videos/*/experiments/*/audio/
+videos/*/experiments/*/preview/

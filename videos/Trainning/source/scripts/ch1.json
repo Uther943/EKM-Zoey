@@ -1,0 +1,19 @@
+{
+  "section": "ch1",
+  "voice": "en-US-GuyNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {"id": "S0", "title": "CHAPTER 1 · Each Section Is a Web Page"},
+    {"id": "S1", "title": "Just Like a Slide"},
+    {"id": "S2", "title": "Same Time, Same Picture"}
+  ],
+  "units": [
+    {"slide": "S1", "en": "Each section of the video is a web page.", "zh": "视频的每一段都是一个网页。"},
+    {"slide": "S1", "en": "Circles, lines, labels, and subtitles | are placed on it, just like on a slide.", "zh": "圆、线、标签和字幕 | 都摆在上面，就像一页幻灯片。", "hold": {"after": "slide", "seconds": 1.5}},
+    {"slide": "S2", "en": "Ask the page for any moment, say 12.5 seconds,", "zh": "随便问网页一个时间点，比如 12.5 秒，"},
+    {"slide": "S2", "list": true, "en": "and it draws exactly what should be on screen.", "zh": "它就画出那一刻屏幕上该有的画面。"},
+    {"slide": "S2", "en": "The same time always gives the same picture.", "zh": "同一个时间，永远得到同一张画面。", "hold": {"after": "picture", "seconds": 1.5}}
+  ],
+  "source_text": "Each section of the video is a web page. Circles, lines, labels, and subtitles are placed on it, just like on a slide. Ask the page for any moment, say 12.5 seconds, and it draws exactly what should be on screen. The same time always gives the same picture."
+}

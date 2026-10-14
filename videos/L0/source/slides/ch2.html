@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chapter 2 — What Knowledge Management Means at Lenovo</title>
+<link rel="stylesheet" href="../../../../engine/engine.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 chapter card -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.3"><circle cx="770" cy="400" r="34" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.35"><circle cx="1150" cy="400" r="34" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.4" data-dur="1.0" points="770,400 960,250 1150,400" fill="none" stroke="#fff" stroke-width="2.5" pathLength="1"/>
+      <g class="a breathe" data-at="s+0.2"><circle cx="960" cy="360" r="78" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.4"><circle cx="960" cy="360" r="118" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="4 10" class="spin"/></g>
+      <g class="a" data-at="s+0.45"><text x="960" y="381" text-anchor="middle" class="svgtext" font-size="60">02</text></g>
+      <g class="a" data-at="s+1.0" data-icon="sparkles" data-x="560" data-y="330" data-s="130"></g>
+      <g class="a" data-at="s+1.1" data-icon="sparkles" data-x="1370" data-y="300" data-s="100"></g>
+    </svg>
+    <div class="card-kicker a" data-at="s+0.6">CHAPTER 2</div>
+    <div class="card-title a" data-at="s+0.8">What Knowledge Management Means at Lenovo</div>
+    <div class="card-rule a" data-at="s+1.1" data-kind="scalex"></div>
+  </section>
+
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">More Than a Process</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">An AI-Ready Ecosystem</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+
+
+</div>
+<script src="../../build/timelines/timeline_ch2.js"></script>
+<script src="../../../../engine/engine.js"></script>
+<script>
+const { el, div, node, pill, line, bracket, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+const stream = (svg, d, at, id) => {
+  el("path", { id, d, fill: "none", stroke: "rgba(255,255,255,.45)", "stroke-width": 2, pathLength: 1, class: "draw", "data-at": at, "data-dur": "0.9" }, svg);
+  el("path", { d, fill: "none", stroke: R, "stroke-width": 4, "stroke-linecap": "round", "stroke-dasharray": "0.04 0.2",
+    pathLength: 1, class: "stream", "data-at": at + "+0.6", filter: "url(#glowSoft)" }, svg);
+};
+
+// ---------- S1: from activity / process to a strategic initiative toward a Knowledge + AI-driven organization ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c");
+  // EKM appears with the first words, above the "old" view
+  node(svg, html, { x: 480, y: 395, r: 72, fill: R, glow: true, breathe: true, text: "EKM", textSize: 40, at: "u0@Enterprise" });
+  line(svg, { x1: 480, y1: 475, x2: 480, y2: 516, at: "u0@activity-0.4", w: 2 });
+  // the "old" view: an activity or a process, dimmed inside a dashed frame
+  el("rect", { x: 300, y: 520, width: 360, height: 240, rx: 26, fill: "rgba(255,255,255,.03)", stroke: "rgba(255,255,255,.35)",
+    "stroke-width": 1.5, "stroke-dasharray": "6 8", class: "a", "data-at": "u0@activity-0.3" }, svg);
+  const p1 = pill(html, { text: "An Activity", x: 330, y: 560, w: 300, sm: true, at: "u0@activity" });
+  const p2 = pill(html, { text: "A Process", x: 330, y: 658, w: 300, sm: true, at: "u0@process" });
+  p1.dataset.dim = p2.dataset.dim = "0.6";
+  // "more than": an ascending path to the house (the EKP house body, a smaller copy of the one in Ch4)
+  const hx = 1350, k = 0.68, roof = { top: 300, base: 405, half: 320 }, py = 418, ph = 143, pw = 184, fy = 575, fh = 38;
+  const roofD = `M${hx - roof.half} ${roof.base} L ${hx} ${roof.top} L ${hx + roof.half} ${roof.base} Z`;
+  const cols = [hx - 218, hx, hx + 218];
+  const toHouse = "M670 640 C 820 640, 900 594, 1004 594";
+  stream(svg, toHouse, "p1", "S1rise");
+  pill(html, { text: "Strategic Enterprise Initiative", x: 700, y: 730, w: 520, red: true, at: "u1@strategic" });
+  // transition: a light dot runs to the house site; where it lands, a dashed blueprint of the house is drawn
+  el("circle", { cx: 0, cy: 0, r: 9, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": "S1rise",
+    "data-at": "u1@strategic+0.3", "data-dur": "1.0" }, svg);
+  el("circle", { cx: 1004, cy: 594, r: 12, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": 12,
+    "data-at": "u1@initiative", "data-dur": "0.9" }, svg);
+  const bp = el("g", { class: "a", "data-at": "u1@initiative", "data-dur": "0.2", "data-out": "u1@leading+0.6" }, svg);
+  const blue = { fill: "none", stroke: "rgba(255,255,255,.55)", "stroke-width": 1.5, "stroke-dasharray": "0.012 0.008", pathLength: 1, class: "draw" };
+  el("path", { ...blue, d: `M${hx - 340} ${fy + fh / 2} L ${hx + 340} ${fy + fh / 2}`, "data-at": "u1@initiative", "data-dur": "0.6" }, bp);
+  cols.forEach((x, i) => el("path", { ...blue, d: `M${x - pw / 2} ${py + ph} L ${x - pw / 2} ${py} L ${x + pw / 2} ${py} L ${x + pw / 2} ${py + ph}`,
+    "data-at": `u1@initiative+${(0.2 + i * 0.12).toFixed(2)}`, "data-dur": "0.7" }, bp));
+  el("path", { ...blue, d: roofD, "data-at": "u1@initiative+0.5", "data-dur": "0.8" }, bp);
+  // roof: outline draws first, then the fill and the text fade in (as in Ch4)
+  const defs = el("defs", {}, svg), gr = el("linearGradient", { id: "S1roof", x1: 0, y1: 0, x2: 0, y2: 1 }, defs);
+  el("stop", { offset: "0%", "stop-color": "#E93A3A" }, gr);
+  el("stop", { offset: "100%", "stop-color": "#7A1E4A" }, gr);
+  el("path", { d: roofD, fill: "url(#S1roof)", filter: "url(#glowSoft)", class: "a", "data-at": "u1@transforming+0.5", "data-kind": "fadeonly", "data-dur": "0.8" }, svg);
+  el("path", { d: roofD, fill: "none", stroke: "rgba(255,255,255,.55)", "stroke-width": 2, "stroke-linejoin": "round", pathLength: 1,
+    class: "draw", "data-at": "u1@transforming", "data-dur": "0.9" }, svg);
+  const txt = (x, y, text, at, size, fill) => {
+    const t = el("text", { x, y, "text-anchor": "middle", class: "svgtext a", "font-size": size, "font-weight": 600, "data-at": at }, svg);
+    t.textContent = text; if (fill) t.style.fill = fill; return t;
+  };
+  txt(hx, 362, "EKM", "u1@transforming+0.8", 36);
+  txt(hx, 393, "Leading Knowledge + AI-Driven Organization", "u1@transforming+1.0", 18, "rgba(255,255,255,.92)");
+  // three pillars rise one by one
+  [["team", "People", PURPLE, "Lenovo"], ["grid", "Process", BLUE, "into"], ["site", "EKP Platform", PURPLE, "leading"]].forEach(([icon, label, fill, w], i) => {
+    const x = cols[i], g = el("g", { class: "a", "data-kind": "scaley", "data-at": `u1@${w}`, "data-dur": "0.6" }, svg);
+    el("rect", { x: x - pw / 2, y: py, width: pw, height: ph, rx: 10, fill, "fill-opacity": 0.6, stroke: "rgba(255,255,255,.3)", "stroke-width": 1.5 }, g);
+    el("rect", { x: x - pw / 2 + 10, y: py, width: pw - 20, height: 3, rx: 1.5, fill: R, filter: "url(#glowDot)" }, g);
+    el("g", { class: "a", "data-at": `u1@${w}+0.35`, "data-icon": icon, "data-x": x, "data-y": py + 45, "data-s": 44 }, svg);
+    div("nlabel a", label, { left: x + "px", top: (py + 84) + "px", fontSize: "22px" }, html, { at: `u1@${w}+0.45` });
+  });
+  // the foundation: a plain glowing red base
+  div("a", "Transformation", { position: "absolute", left: (hx - 340) + "px", top: fy + "px", width: "680px", height: fh + "px", borderRadius: "12px", background: R,
+    border: "1px solid rgba(255,255,255,.3)", boxShadow: "0 0 26px rgba(233,58,58,.6)", textAlign: "center", lineHeight: fh + "px",
+    fontSize: "22px", fontWeight: 600, letterSpacing: "1px" }, html, { at: "u1@Knowledge", kind: "scalex" });
+  // knowledge rises from the foundation through each pillar to the roof
+  cols.forEach((x, i) => {
+    const id = `S1up${i}`;
+    el("path", { id, d: `M${x} ${fy} L ${x} ${roof.base + 3}`, fill: "none", stroke: "none" }, svg);
+    el("circle", { cx: 0, cy: 0, r: 7, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": id,
+      "data-at": `u1@organization+${(i * 0.15).toFixed(2)}`, "data-dur": "0.8" }, svg);
+  });
+});
+
+// ---------- S2: a trusted, scalable, AI-ready ecosystem connecting people, content and intelligence ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c"), core = [1000, 580];
+  const top = 440, step = 84;
+  bracket(svg, { x: 270, y1: top, y2: top + step * 2 + 62, at: "u2@trusted-0.2" });
+  [["Trusted", "trusted"], ["Scalable", "scalable"], ["AI-Ready", "AI-ready"]].forEach(([text, w], k) =>
+    pill(html, { text, x: 300, y: top + k * step, w: 300, sm: true, left: true, dot: true, at: `u2@${w}` }));
+  line(svg, { x1: 610, y1: core[1] - 7, x2: core[0] - 122, y2: core[1] - 7, at: "u2@ecosystem-0.2", w: 2 });
+  const nodes = { people: [760, 800, "person", "People"], content: [1240, 800, "doc", "Content"], intelligence: [1000, 320, "chip", "Intelligence"] };
+  // triangle edges as paths, so knowledge can flow around the ecosystem
+  const keys = ["people", "content", "intelligence"];
+  keys.forEach((k, i) => {
+    const [x1, y1] = nodes[k], [x2, y2] = nodes[keys[(i + 1) % 3]];
+    el("path", { id: `S2e${i}`, d: `M${x1} ${y1} L ${x2} ${y2}`, fill: "none", stroke: "rgba(255,255,255,.35)", "stroke-width": 1.5,
+      pathLength: 1, class: "draw", "data-at": "u2@intelligence+0.3", "data-dur": "0.7" }, svg);
+    line(svg, { x1: core[0], y1: core[1], x2: x1, y2: y1, at: `u2@${k}`, w: 2 });
+  });
+  el("circle", { cx: core[0], cy: core[1], r: 150, fill: "none", stroke: "rgba(255,255,255,.3)", "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" },
+     el("g", { class: "a", "data-at": "u2@ecosystem+0.2" }, svg));
+  node(svg, html, { x: core[0], y: core[1], r: 110, fill: R, glow: true, breathe: true, icon: "network", iconSize: 120, at: "u2@ecosystem" });
+  keys.forEach((k, i) => {
+    const [x, y, icon, label] = nodes[k];
+    node(svg, html, { x, y, r: 60, fill: i % 2 ? BLUE : PURPLE, icon, iconSize: 66, label, labelPos: k === "intelligence" ? "above" : "below", at: `u2@${k}` });
+  });
+  // light travels people -> content -> intelligence -> people
+  [0, 1, 2].forEach(i => el("circle", { cx: 0, cy: 0, r: 8, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": `S2e${i}`,
+    "data-at": `u2@intelligence+${(1.0 + i * 0.9).toFixed(1)}`, "data-dur": "0.9" }, svg));
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>

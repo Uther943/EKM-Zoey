@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Intro — From Code to Video</title>
+<link rel="stylesheet" href="../../../../engine/engine.css">
+<style>
+/* cover (same as L0's intro.html) */
+#S0 .big { position: absolute; left: 0; right: 0; top: 610px; text-align: center; font-size: 100px; font-weight: 600;
+  letter-spacing: -1px; text-shadow: 0 6px 40px rgba(0,0,0,.5); }
+#S0 .sub { position: absolute; left: 0; right: 0; top: 762px; text-align: center; font-size: 32px; font-weight: 400;
+  letter-spacing: 2px; color: #fff; }
+#S0 .rule { position: absolute; left: 760px; width: 400px; top: 745px; height: 3px; background: var(--red);
+  box-shadow: 0 0 16px var(--red); transform-origin: center; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 cover: a script (left) and a video (right) joined through the red code core -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.4"><circle cx="680" cy="470" r="80" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.5"><circle cx="1240" cy="470" r="80" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.6" data-dur="1.2" points="680,470 960,260 1240,470" fill="none" stroke="#fff" stroke-width="3" pathLength="1"/>
+      <polyline class="draw" data-at="s+1.0" data-dur="1.0" points="680,470 800,560 960,560 1120,560 1240,470" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2" pathLength="1"/>
+      <g class="a" data-at="s+0.1"><circle cx="960" cy="360" r="150" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.8"><text x="960" y="398" text-anchor="middle" class="svgtext" font-size="110">&lt;/&gt;</text></g>
+      <g class="a" data-at="s+0.6" data-icon="doc" data-x="680" data-y="470" data-s="96"></g>
+      <g class="a" data-at="s+0.7" data-icon="video" data-x="1240" data-y="470" data-s="96"></g>
+      <g class="a" data-at="s+1.2" data-icon="sparkles" data-x="380" data-y="330" data-s="200"></g>
+      <g class="a" data-at="s+1.4" data-icon="sparkles" data-x="1560" data-y="300" data-s="160"></g>
+    </svg>
+    <div class="big a" data-at="s+1.0">From Code to Video</div>
+    <div class="rule a" data-at="s+1.4" data-kind="scalex"></div>
+    <div class="sub a" data-at="s+1.6">How a Script Becomes an Explainer Video</div>
+  </section>
+
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Built with Code</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Five Simple Steps</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+</div>
+<script src="../../build/timelines/timeline_intro.js"></script>
+<script src="../../../../engine/engine.js"></script>
+<script>
+const { el, div, node, pill, line, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+const svgText = (svg, x, y, text, size, at, fill) => {
+  const t = el("text", { x, y, "text-anchor": "middle", class: "svgtext a", "font-size": size, "data-at": at }, svg);
+  t.textContent = text; if (fill) t.style.fill = fill; return t;
+};
+
+// ---------- S1: not filmed, not edited by hand -> built with code ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c"), core = [1330, 560];
+  // the old way: a camera over a dashed frame holding the two crossed-out ways
+  node(svg, html, { x: 520, y: 340, r: 62, fill: BLUE, icon: "video", iconSize: 72, at: "u0" });
+  line(svg, { x1: 520, y1: 404, x2: 520, y2: 466, at: "u0+0.3", w: 2 });
+  el("rect", { x: 330, y: 470, width: 380, height: 250, rx: 26, fill: "rgba(255,255,255,.03)", stroke: "rgba(255,255,255,.35)",
+    "stroke-width": 1.5, "stroke-dasharray": "6 8", class: "a", "data-at": "u0+0.3" }, svg);
+  [["Filmed", "filmed", 515], ["Edited by Hand", "edited", 615]].forEach(([text, w, y]) => {
+    const p = pill(html, { text, x: 360, y, w: 320, sm: true, at: `u0@${w}` });
+    p.dataset.dim = "0.6";
+    // a red strike through each one, just after it is said
+    line(svg, { x1: 385, y1: y + 31, x2: 655, y2: y + 31, stroke: R, w: 3, at: `u0@${w}+0.45`, dur: 0.4 });
+  });
+  // the new way: a light dot runs to the red code core, which grows where it lands
+  const d = "M720 595 C 880 595, 1000 560, 1196 560";
+  el("path", { id: "S1go", d, fill: "none", stroke: "rgba(255,255,255,.45)", "stroke-width": 2, pathLength: 1, class: "draw",
+    "data-at": "u1", "data-dur": "0.7" }, svg);
+  el("circle", { cx: 0, cy: 0, r: 9, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": "S1go",
+    "data-at": "u1@built-0.3", "data-dur": "0.8" }, svg);
+  const g = el("g", { class: "a breathe", "data-kind": "bloom", "data-at": "u1@built+0.5", "data-dur": "0.7" }, svg);
+  el("circle", { cx: core[0], cy: core[1], r: 130, fill: R, filter: "url(#glowRed)" }, g);
+  const t = el("text", { x: core[0], y: core[1] + 33, "text-anchor": "middle", class: "svgtext", "font-size": 96 }, g);
+  t.textContent = "</>";
+  el("circle", { cx: core[0], cy: core[1], r: 130, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": 130,
+    "data-at": "u1@built+0.5", "data-dur": "0.9" }, svg);
+  el("circle", { cx: core[0], cy: core[1], r: 172, fill: "none", stroke: "rgba(255,255,255,.3)",
+    "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" }, el("g", { class: "a", "data-at": "u1@code" }, svg));
+  pill(html, { text: "Built with Code", x: core[0] - 180, y: 762, w: 360, red: true, at: "u1@code" });
+  el("g", { class: "a", "data-at": "u1@code+0.4", "data-icon": "sparkles", "data-x": 1600, "data-y": 380, "data-s": 110 }, svg);
+});
+
+// ---------- S2: the five steps in a row, a light dot carries the work from one to the next ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c"), y = 560, r = 74;
+  const steps = [
+    [360, "doc", "Write the Script"], [690, "chat", "A Voice"], [1020, "site", "A Web Page"],
+    [1350, "layers", "Every Frame"], [1680, "video", "One Film"],
+  ];
+  steps.forEach(([x, icon, label], k) => {
+    const at = `u${3 + k}`, last = k === steps.length - 1;
+    if (k) {
+      const x0 = steps[k - 1][0] + r, x1 = x - r, id = `S2s${k}`;
+      el("path", { id, d: `M${x0} ${y} L ${x1} ${y}`, fill: "none", stroke: last ? R : "rgba(255,255,255,.7)", "stroke-width": last ? 3 : 2,
+        pathLength: 1, class: "draw", "data-at": `${at}-0.45`, "data-dur": "0.5" }, svg);
+      el("circle", { cx: 0, cy: 0, r: 8, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": id,
+        "data-at": `${at}-0.45`, "data-dur": "0.55" }, svg);
+    }
+    svgText(svg, x, y - r - 26, "0" + (k + 1), 26, at, R);
+    node(svg, html, { x, y, r, fill: last ? R : k % 2 ? BLUE : PURPLE, glow: last, breathe: last, icon, iconSize: 86, label, at });
+  });
+  // the finished film: a ring opens around the last step
+  el("circle", { cx: steps[4][0], cy: y, r, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": r,
+    "data-at": "u7@film", "data-dur": "0.9" }, svg);
+  el("g", { class: "a", "data-at": "u7@film+0.3", "data-icon": "sparkles", "data-x": 1740, "data-y": 380, "data-s": 90 }, svg);
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>

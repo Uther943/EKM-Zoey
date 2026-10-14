@@ -1,0 +1,340 @@
+{
+  "section": "closing",
+  "duration": 28.503,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CLOSING · Written, Told, and Built",
+      "start": 0.0,
+      "end": 3.5
+    },
+    {
+      "id": "S1",
+      "title": "Just Edit the Script",
+      "start": 3.5,
+      "end": 13.113
+    },
+    {
+      "id": "S2",
+      "title": "Code Checks the Layout",
+      "start": 13.113,
+      "end": 19.37
+    },
+    {
+      "id": "S3",
+      "title": "Written, Told, and Built",
+      "start": 19.37,
+      "end": 28.503
+    }
+  ],
+  "units": [
+    {
+      "i": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 8.677,
+      "en": "Want to change a sentence? Just edit the script and run it again.",
+      "zh": "想改一句话？只要改文稿，再跑一遍。",
+      "words": [
+        [
+          4.0,
+          "Want"
+        ],
+        [
+          4.229,
+          "to"
+        ],
+        [
+          4.346,
+          "change"
+        ],
+        [
+          4.724,
+          "a"
+        ],
+        [
+          4.815,
+          "sentence"
+        ],
+        [
+          6.352,
+          "Just"
+        ],
+        [
+          6.742,
+          "edit"
+        ],
+        [
+          6.964,
+          "the"
+        ],
+        [
+          7.094,
+          "script"
+        ],
+        [
+          7.55,
+          "and"
+        ],
+        [
+          7.719,
+          "run"
+        ],
+        [
+          7.927,
+          "it"
+        ],
+        [
+          8.057,
+          "again"
+        ]
+      ]
+    },
+    {
+      "i": 1,
+      "slide": "S1",
+      "start": 9.127,
+      "end": 12.263,
+      "en": "The voice, timing, and pictures all update together.",
+      "zh": "配音、时间和画面会一起更新。",
+      "words": [
+        [
+          9.127,
+          "The"
+        ],
+        [
+          9.23,
+          "voice"
+        ],
+        [
+          9.751,
+          "timing"
+        ],
+        [
+          10.389,
+          "and"
+        ],
+        [
+          10.532,
+          "pictures"
+        ],
+        [
+          11.053,
+          "all"
+        ],
+        [
+          11.288,
+          "update"
+        ],
+        [
+          11.613,
+          "together"
+        ]
+      ]
+    },
+    {
+      "i": 2,
+      "slide": "S2",
+      "start": 13.613,
+      "end": 18.487,
+      "en": "Before rendering, code checks the layout: nothing overlaps, and nothing leaves the screen.",
+      "zh": "渲染之前，代码会检查版面：没有重叠，也没有超出画面。",
+      "words": [
+        [
+          13.613,
+          "Before"
+        ],
+        [
+          13.964,
+          "rendering"
+        ],
+        [
+          14.588,
+          "code"
+        ],
+        [
+          14.862,
+          "checks"
+        ],
+        [
+          15.161,
+          "the"
+        ],
+        [
+          15.279,
+          "layout"
+        ],
+        [
+          15.891,
+          "nothing"
+        ],
+        [
+          16.281,
+          "overlaps"
+        ],
+        [
+          16.997,
+          "and"
+        ],
+        [
+          17.167,
+          "nothing"
+        ],
+        [
+          17.492,
+          "leaves"
+        ],
+        [
+          17.74,
+          "the"
+        ],
+        [
+          17.87,
+          "screen"
+        ]
+      ]
+    },
+    {
+      "i": 3,
+      "slide": "S3",
+      "start": 19.87,
+      "end": 25.045,
+      "en": "That is how a script becomes a video: written as words, told by a voice, and built with code.",
+      "zh": "这就是一份文稿变成视频的过程：用文字写成，由声音讲述，用代码搭建。",
+      "words": [
+        [
+          19.87,
+          "That"
+        ],
+        [
+          20.01,
+          "is"
+        ],
+        [
+          20.154,
+          "how"
+        ],
+        [
+          20.336,
+          "a"
+        ],
+        [
+          20.401,
+          "script"
+        ],
+        [
+          20.779,
+          "becomes"
+        ],
+        [
+          21.156,
+          "a"
+        ],
+        [
+          21.234,
+          "video"
+        ],
+        [
+          21.898,
+          "written"
+        ],
+        [
+          22.172,
+          "as"
+        ],
+        [
+          22.302,
+          "words"
+        ],
+        [
+          22.823,
+          "told"
+        ],
+        [
+          23.07,
+          "by"
+        ],
+        [
+          23.24,
+          "a"
+        ],
+        [
+          23.331,
+          "voice"
+        ],
+        [
+          23.904,
+          "and"
+        ],
+        [
+          24.086,
+          "built"
+        ],
+        [
+          24.333,
+          "with"
+        ],
+        [
+          24.503,
+          "code"
+        ]
+      ]
+    }
+  ],
+  "subs": [
+    {
+      "i": 0,
+      "unit": 0,
+      "slide": "S1",
+      "start": 4.0,
+      "end": 8.677,
+      "en": "Want to change a sentence? Just edit the script and run it again.",
+      "zh": "想改一句话？只要改文稿，再跑一遍。"
+    },
+    {
+      "i": 1,
+      "unit": 1,
+      "slide": "S1",
+      "start": 9.127,
+      "end": 12.263,
+      "en": "The voice, timing, and pictures all update together.",
+      "zh": "配音、时间和画面会一起更新。"
+    },
+    {
+      "i": 2,
+      "unit": 2,
+      "slide": "S2",
+      "start": 13.613,
+      "end": 15.891,
+      "en": "Before rendering, code checks the layout:",
+      "zh": "渲染之前，代码会检查版面："
+    },
+    {
+      "i": 3,
+      "unit": 2,
+      "slide": "S2",
+      "start": 15.891,
+      "end": 18.487,
+      "en": "nothing overlaps, and nothing leaves the screen.",
+      "zh": "没有重叠，也没有超出画面。"
+    },
+    {
+      "i": 4,
+      "unit": 3,
+      "slide": "S3",
+      "start": 19.87,
+      "end": 21.898,
+      "en": "That is how a script becomes a video:",
+      "zh": "这就是一份文稿变成视频的过程："
+    },
+    {
+      "i": 5,
+      "unit": 3,
+      "slide": "S3",
+      "start": 21.898,
+      "end": 25.045,
+      "en": "written as words, told by a voice, and built with code.",
+      "zh": "用文字写成，由声音讲述，用代码搭建。"
+    }
+  ]
+}

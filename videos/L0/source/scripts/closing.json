@@ -1,0 +1,60 @@
+{
+  "section": "closing",
+  "voice": "en-US-AriaNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CLOSING · Powering AI at Lenovo"
+    },
+    {
+      "id": "S1",
+      "title": "A More Connected Organization"
+    },
+    {
+      "id": "S2",
+      "title": "A Strategic Advantage"
+    },
+    {
+      "id": "S3",
+      "title": "Powers AI Innovation"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "We're building a smarter, more connected organization | where knowledge flows freely and intelligent decisions happen faster | to make Lenovo the model for a Knowledge + AI-Driven future.",
+      "zh": "我们正在打造一个更智能、联系更紧密的组织，| 让知识自由流动，让明智的决策更快发生，| 从而把联想打造成知识 + AI 驱动未来的典范。",
+      "hold": {
+        "after": "future",
+        "seconds": 2.4
+      }
+    },
+    {
+      "slide": "S2",
+      "en": "We are building a culture | where knowledge management is a natural part of every employee's daily work.",
+      "zh": "我们正在打造一种文化，| 让知识管理自然融入每位员工的日常工作。"
+    },
+    {
+      "slide": "S2",
+      "en": "Then, knowledge becomes a strategic advantage | that helps Lenovo move faster, work smarter, and lead in the age of AI.",
+      "zh": "这样，知识就会成为一项战略优势，| 帮助联想行动更快、工作更聪明，并在 AI 时代保持领先。"
+    },
+    {
+      "slide": "S3",
+      "en": "Knowledge powers AI.",
+      "zh": "知识驱动 AI。"
+    },
+    {
+      "slide": "S3",
+      "en": "Each of us has a role to drive Lenovo's future.",
+      "zh": "我们每个人都能为推动联想的未来发挥作用。",
+      "hold": {
+        "after": "future",
+        "seconds": 2.2
+      }
+    }
+  ],
+  "source_text": "We're building a smarter, more connected organization where knowledge flows freely and intelligent decisions happen faster to make Lenovo the model for a Knowledge + AI-Driven future. We are building a culture where knowledge management is a natural part of every employee's daily work. Then, knowledge becomes a strategic advantage that helps Lenovo move faster, work smarter, and lead in the age of AI. Knowledge powers AI. Each of us has a role to drive Lenovo's future."
+}

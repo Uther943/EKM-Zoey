@@ -1,0 +1,109 @@
+{
+  "section": "closing",
+  "voice": "en-US-AriaNeural",
+  "rate": "-4%",
+  "title_card_seconds": 3.5,
+  "slides": [
+    {
+      "id": "S0",
+      "title": "CLOSING · Knowledge Powers AI"
+    },
+    {
+      "id": "S1",
+      "title": "What Knowledge Powers"
+    },
+    {
+      "id": "S2",
+      "title": "From Scattered to Trusted"
+    },
+    {
+      "id": "S3",
+      "title": "A Strategic Advantage"
+    },
+    {
+      "id": "S4",
+      "title": "Knowledge Powers AI"
+    },
+    {
+      "id": "S5",
+      "title": "Learn More"
+    }
+  ],
+  "units": [
+    {
+      "slide": "S1",
+      "en": "Knowledge powers decisions.",
+      "zh": "知识驱动决策。"
+    },
+    {
+      "slide": "S1",
+      "en": "Knowledge powers collaboration.",
+      "zh": "知识驱动协作。"
+    },
+    {
+      "slide": "S1",
+      "en": "And increasingly, knowledge powers AI.",
+      "zh": "而且，知识正越来越多地驱动 AI。",
+      "hold": {
+        "after": "AI",
+        "seconds": 1.8
+      }
+    },
+    {
+      "slide": "S2",
+      "en": "Enterprise Knowledge Management helps Lenovo transform knowledge | from scattered information into a trusted enterprise asset.",
+      "zh": "企业知识管理帮助联想转化知识，| 让零散的信息成为可信的企业资产。"
+    },
+    {
+      "slide": "S2",
+      "en": "And the Enterprise Knowledge Platform provides the foundation | that enables employees and AI to create, discover, share, and reuse knowledge at scale.",
+      "zh": "而企业知识平台提供了基础，| 让员工与 AI 能够大规模地创建、发现、共享和复用知识。"
+    },
+    {
+      "slide": "S3",
+      "en": "Together, we can build a culture where knowledge is not lost, duplicated, or hidden.",
+      "zh": "我们可以携手打造一种文化：知识不会丢失、重复或被埋没。"
+    },
+    {
+      "slide": "S3",
+      "en": "Instead, knowledge becomes a strategic advantage | that helps Lenovo move faster, work smarter, and lead in the age of AI.",
+      "zh": "相反，知识会成为一项战略优势，| 帮助联想行动更快、工作更聪明，并在 AI 时代保持领先。"
+    },
+    {
+      "slide": "S4",
+      "en": "Knowledge powers AI.",
+      "zh": "知识驱动 AI。"
+    },
+    {
+      "slide": "S4",
+      "en": "And every employee has a role to play.",
+      "zh": "而每一位员工都能发挥自己的作用。",
+      "hold": {
+        "after": "play",
+        "seconds": 2.2
+      }
+    },
+    {
+      "slide": "S5",
+      "en": "Learn more about EKM and EKP:",
+      "zh": "了解更多关于 EKM 和 EKP 的信息："
+    },
+    {
+      "slide": "S5",
+      "list": true,
+      "en": "Additional training modules",
+      "zh": "更多培训模块"
+    },
+    {
+      "slide": "S5",
+      "list": true,
+      "en": "Link to Sharepoint site",
+      "zh": "SharePoint 站点链接",
+      "hold": {
+        "after": "site",
+        "seconds": 3.5
+      }
+    }
+  ],
+  "source_text": "Knowledge powers decisions. Knowledge powers collaboration. And increasingly, knowledge powers AI. Enterprise Knowledge Management helps Lenovo transform knowledge from scattered information into a trusted enterprise asset. And the Enterprise Knowledge Platform provides the foundation that enables employees and AI to create, discover, share, and reuse knowledge at scale. Together, we can build a culture where knowledge is not lost, duplicated, or hidden. Instead, knowledge becomes a strategic advantage that helps Lenovo move faster, work smarter, and lead in the age of AI. Knowledge powers AI. And every employee has a role to play. Learn more about EKM and EKP: Additional training modules Link to Sharepoint site"
+}

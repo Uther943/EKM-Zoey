@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Closing — Knowledge Powers AI</title>
+<link rel="stylesheet" href="engine.css">
+<style>
+  .finale-title { position: absolute; left: 0; right: 0; top: 610px; text-align: center; font-size: 84px; font-weight: 600;
+    letter-spacing: -0.5px; text-shadow: 0 6px 40px rgba(0,0,0,.5); }
+  .finale-sub { position: absolute; left: 0; right: 0; top: 728px; text-align: center; font-size: 34px; font-weight: 600; color: rgba(255,255,255,.9); }
+  .url-box { position: absolute; border: 1.5px dashed rgba(255,255,255,.45); border-radius: 18px; padding: 12px 26px;
+    font-size: 24px; font-weight: 600; color: rgba(255,255,255,.75); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 closing card -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.3"><circle cx="770" cy="400" r="34" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.35"><circle cx="1150" cy="400" r="34" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.4" data-dur="1.0" points="770,400 960,250 1150,400" fill="none" stroke="#fff" stroke-width="2.5" pathLength="1"/>
+      <g class="a breathe" data-at="s+0.2"><circle cx="960" cy="360" r="78" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.4"><circle cx="960" cy="360" r="118" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="4 10" class="spin"/></g>
+      <g class="a" data-at="s+0.45" data-icon="headbulb" data-on="red" data-x="960" data-y="360" data-s="96"></g>
+      <g class="a" data-at="s+1.0" data-icon="sparkles" data-x="560" data-y="330" data-s="130"></g>
+      <g class="a" data-at="s+1.1" data-icon="sparkles" data-x="1370" data-y="300" data-s="100"></g>
+    </svg>
+    <div class="card-kicker a" data-at="s+0.6">CLOSING MESSAGE</div>
+    <div class="card-title a" data-at="s+0.8">Knowledge Powers AI</div>
+    <div class="card-rule a" data-at="s+1.1" data-kind="scalex"></div>
+  </section>
+
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">What Knowledge Powers</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">From Scattered to Trusted</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+  <section class="scene" id="S3">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">A Strategic Advantage</h1>
+    <div class="content" id="S3c"><svg class="art" viewBox="0 0 1920 1080" id="S3art"></svg></div>
+  </section>
+
+  <!-- S4 finale: no slide title, the message is the title -->
+  <section class="scene" id="S4">
+    <svg class="art" viewBox="0 0 1920 1080" id="S4art"></svg>
+    <div class="finale-title a" data-at="u7@Knowledge">Knowledge Powers AI</div>
+    <div class="finale-sub a" data-at="u8@every">Every Employee Has a Role to Play</div>
+  </section>
+
+  <section class="scene" id="S5">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Learn More</h1>
+    <div class="content" id="S5c"><svg class="art" viewBox="0 0 1920 1080" id="S5art"></svg></div>
+  </section>
+
+</div>
+<script src="timeline_closing.js"></script>
+<script src="engine.js"></script>
+<script>
+// SharePoint address shown on the last slide; null shows a placeholder until the link is provided
+const SHAREPOINT_URL = null;
+
+const { el, div, node, pill, line, bracket, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+const stream = (svg, d, at, id) => {
+  el("path", { id, d, fill: "none", stroke: "rgba(255,255,255,.45)", "stroke-width": 2, pathLength: 1, class: "draw", "data-at": at, "data-dur": "0.9" }, svg);
+  el("path", { d, fill: "none", stroke: R, "stroke-width": 4, "stroke-linecap": "round", "stroke-dasharray": "0.04 0.2",
+    pathLength: 1, class: "stream", "data-at": at + "+0.6", filter: "url(#glowSoft)" }, svg);
+};
+const pulse = (svg, x, y, r0, at, dur = 0.9) => el("circle", { cx: x, cy: y, r: r0, fill: "none", stroke: R, "stroke-width": 2, class: "pulse",
+  "data-r0": r0, "data-at": at, "data-dur": dur }, svg);
+
+// ---------- S1: knowledge powers decisions, collaboration and, increasingly, AI ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c"), core = [600, 560];
+  el("circle", { cx: core[0], cy: core[1], r: 160, fill: "none", stroke: "rgba(255,255,255,.35)", "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" },
+     el("g", { class: "a", "data-at": "u0+0.2" }, svg));
+  node(svg, html, { x: core[0], y: core[1], r: 125, fill: R, glow: true, breathe: true, icon: "headbulb", iconSize: 135, at: "u0",
+    label: "Knowledge", labelGap: 50 });
+  [["target", "Powers Decisions", 360, "u0@decisions"], ["team", "Powers Collaboration", 560, "u1@collaboration"],
+   ["chip", "Powers AI", 760, "u2@AI"]].forEach(([icon, text, y, at], k) => {
+    stream(svg, `M${core[0] + 170} ${core[1] + (y - core[1]) * 0.35} C ${core[0] + 320} ${core[1] + (y - core[1]) * 0.6}, 1020 ${y}, 1100 ${y}`, at + "-0.4");
+    node(svg, html, { x: 1160, y, r: 56, fill: k === 2 ? R : k ? BLUE : PURPLE, glow: k === 2, icon, iconSize: 64, at });
+    pill(html, { text, x: 1250, y: y - 31, w: 440, sm: true, left: true, red: k === 2, at: at + "+0.05" });
+  });
+  // "increasingly": the AI row keeps growing in emphasis
+  el("circle", { cx: 1160, cy: 760, r: 76, fill: "none", stroke: "rgba(233,58,58,.7)", "stroke-width": 2.5, "stroke-dasharray": "30 18", class: "spinr" },
+     el("g", { class: "a", "data-at": "u2@AI+0.3" }, svg));
+  pulse(svg, 1160, 760, 56, "u2@AI+0.2", 1.0);
+});
+
+// ---------- S2: EKM turns scattered information into a trusted asset; EKP is the foundation for employees and AI ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c"), ty = 380, ekm = [940, ty], asset = [1460, ty];
+  // scattered information: loose dim dots
+  let seed = 5;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  for (let i = 0; i < 22; i++) {
+    const x = 270 + rnd() * 270, y = ty - 85 + rnd() * 170;
+    el("circle", { cx: x, cy: y, r: 4 + rnd() * 6, fill: i % 3 ? "rgba(255,255,255,.55)" : "rgba(233,58,58,.7)", class: "a drift", "data-k": i % 5,
+      "data-at": `u3@scattered+${(i * 0.03).toFixed(2)}` }, svg);
+  }
+  div("nlabel a", "Scattered Information", { left: "405px", top: (ty + 108) + "px", color: "rgba(255,255,255,.8)" }, html, { at: "u3@information" });
+  stream(svg, `M570 ${ty} L ${ekm[0] - 85} ${ty}`, "u3@transform");
+  node(svg, html, { x: ekm[0], y: ekm[1], r: 72, fill: PURPLE, icon: "grid", iconSize: 80, at: "u3@Enterprise",
+    label: "Enterprise Knowledge Management", labelAt: "u3@Management", labelGap: 14 });
+  stream(svg, `M${ekm[0] + 85} ${ty} L ${asset[0] - 100} ${ty}`, "u3@into");
+  el("circle", { cx: asset[0], cy: asset[1], r: 104, fill: "none", stroke: "rgba(233,58,58,.7)", "stroke-width": 2.5, "stroke-dasharray": "44 24", class: "spinr" },
+     el("g", { class: "a", "data-at": "u3@trusted+0.2" }, svg));
+  node(svg, html, { x: asset[0], y: asset[1], r: 84, fill: R, glow: true, breathe: true, icon: "layers", iconSize: 92, at: "u3@trusted",
+    label: "Trusted Enterprise Asset", labelAt: "u3@asset", labelGap: 32 });
+  // EKP: the foundation; employees and AI create, discover, share and reuse on top of it
+  div("a", "", { position: "absolute", left: "300px", top: "712px", width: "1400px", height: "26px", borderRadius: "13px", background: R,
+    boxShadow: "0 0 30px rgba(233,58,58,.6)", border: "1px solid rgba(255,255,255,.3)" }, html, { at: "u4@foundation", kind: "scalex" });
+  div("nlabel a", "Enterprise Knowledge Platform (EKP)", { left: "1000px", top: "756px" }, html, { at: "u4@Platform" });
+  node(svg, null, { x: 380, y: 630, r: 46, fill: PURPLE, icon: "person", iconSize: 54, at: "u4@employees" });
+  node(svg, null, { x: 1620, y: 630, r: 46, fill: BLUE, icon: "chip", iconSize: 56, at: "u4@AI" });
+  [["Create", "create"], ["Discover", "discover"], ["Share", "share"], ["Reuse", "reuse"]].forEach(([text, w], k) =>
+    pill(html, { text, x: 500 + k * 260, y: 599, w: 230, sm: true, red: k === 3, at: `u4@${w}` }));
+  [380, 1620].forEach((x, i) => line(svg, { x1: x, y1: 678, x2: x, y2: 710, at: `u4@${i ? "AI" : "employees"}+0.1`, w: 2, stroke: R }));
+  ["scale"].forEach(w => [0, 1, 2, 3].forEach(k => pulse(svg, 615 + k * 260, 630, 30, `u4@${w}+${(k * 0.1).toFixed(1)}`, 0.8)));
+});
+
+// ---------- S3: a culture where knowledge is not lost, duplicated or hidden -> a strategic advantage ----------
+ENGINE.build(() => {
+  const svg = $("S3art"), html = $("S3c"), core = [1040, 560];
+  node(svg, html, { x: 430, y: 380, r: 58, fill: PURPLE, icon: "team", iconSize: 66, at: "u5@culture", label: "Culture", labelPos: "above" });
+  const lt = 470, step = 84;
+  bracket(svg, { x: 240, y1: lt, y2: lt + step * 2 + 62, at: "u5@not-0.2" });
+  [["Not Lost", "lost"], ["Not Duplicated", "duplicated"], ["Not Hidden", "hidden"]].forEach(([text, w], k) =>
+    pill(html, { text, x: 260, y: lt + k * step, w: 340, sm: true, left: true, dot: true, at: `u5@${w}` }));
+  line(svg, { x1: 430, y1: 438, x2: 430, y2: lt - 8, at: "u5@where", w: 2, stroke: "rgba(255,255,255,.5)" });
+  stream(svg, `M612 ${lt + 115} C 720 ${lt + 115}, 800 ${core[1]}, ${core[0] - 140} ${core[1]}`, "u6@Instead");
+  el("circle", { cx: core[0], cy: core[1], r: 130, fill: "none", stroke: "rgba(233,58,58,.7)", "stroke-width": 2.5, "stroke-dasharray": "50 26", class: "spinr" },
+     el("g", { class: "a", "data-at": "u6@strategic+0.2" }, svg));
+  node(svg, html, { x: core[0], y: core[1], r: 100, fill: R, glow: true, breathe: true, icon: "rocket", iconSize: 110, at: "u6@strategic",
+    label: "Strategic Advantage", labelAt: "u6@advantage", labelGap: 44 });
+  const rt = core[1] - step - 31;
+  bracket(svg, { x: 1300, y1: rt, y2: rt + step * 2 + 62, at: "u6@helps" });
+  line(svg, { x1: core[0] + 140, y1: core[1], x2: 1290, y2: core[1], at: "u6@helps-0.1", w: 2 });
+  [["Move Faster", "move"], ["Work Smarter", "work"], ["Lead in the Age of AI", "lead"]].forEach(([text, w], k) =>
+    pill(html, { text, x: 1320, y: rt + k * step, w: 400, sm: true, red: k === 2, at: `u6@${w}` }));
+});
+
+// ---------- S4 finale: knowledge powers AI, and every employee has a role ----------
+ENGINE.build(() => {
+  const svg = $("S4art"), c = [960, 380];
+  el("circle", { cx: c[0], cy: c[1], r: 175, fill: "none", stroke: "rgba(255,255,255,.3)", "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" },
+     el("g", { class: "a", "data-at": "s+0.2" }, svg));
+  el("circle", { cx: c[0], cy: c[1], r: 140, fill: "none", stroke: "rgba(233,58,58,.7)", "stroke-width": 2.5, "stroke-dasharray": "60 30", class: "spinr" },
+     el("g", { class: "a", "data-at": "s+0.3" }, svg));
+  node(svg, null, { x: c[0], y: c[1], r: 110, fill: R, glow: true, breathe: true, icon: "chip", iconSize: 120, at: "s+0.1" });
+  pulse(svg, c[0], c[1], 110, "u7@AI", 1.0);
+  // every employee: people on the outer orbit, each connected to the core
+  const orbit = [[-300, -40], [-250, 120], [300, -40], [250, 120], [-170, -150], [170, -150]];
+  orbit.forEach(([dx, dy], k) => {
+    const x = c[0] + dx, y = c[1] + dy, at = `u8@every+${(k * 0.1).toFixed(1)}`;
+    line(svg, { x1: c[0] + dx * 0.6, y1: c[1] + dy * 0.6, x2: x - dx * 0.12, y2: y - dy * 0.12, at, w: 1.5, stroke: "rgba(255,255,255,.45)" });
+    node(svg, null, { x, y, r: 30, fill: k % 2 ? BLUE : PURPLE, icon: "person", iconSize: 36, at, drift: k });
+  });
+  el("g", { class: "a", "data-at": "u7@powers", "data-icon": "sparkles", "data-x": 560, "data-y": 260, "data-s": 110 }, svg);
+  el("g", { class: "a", "data-at": "u7@powers+0.1", "data-icon": "sparkles", "data-x": 1380, "data-y": 230, "data-s": 90 }, svg);
+});
+
+// ---------- S5: learn more ----------
+ENGINE.build(() => {
+  const svg = $("S5art"), html = $("S5c");
+  node(svg, html, { x: 470, y: 450, r: 72, fill: R, glow: true, breathe: true, text: "EKM", textSize: 34, at: "u9@EKM" });
+  node(svg, html, { x: 470, y: 690, r: 72, fill: PURPLE, text: "EKP", textSize: 34, at: "u9@EKP" });
+  bracket(svg, { x: 640, y1: 420, y2: 720, at: "u10-0.3" });
+  line(svg, { x1: 552, y1: 570, x2: 630, y2: 570, at: "u10-0.4", w: 2 });
+  [["video", "Additional Training Modules", 470, "u10"], ["site", "Link to SharePoint Site", 640, "u11"]].forEach(([icon, text, y, at], k) => {
+    node(svg, null, { x: 730, y, r: 44, fill: k ? BLUE : PURPLE, icon, iconSize: 52, at });
+    pill(html, { text, x: 800, y: y - 31, w: 600, sm: true, left: true, red: k === 1, at: at + "+0.05" });
+  });
+  div("url-box a", SHAREPOINT_URL || "SharePoint link to be added", { left: "800px", top: "727px" }, html, { at: "u11@site" });
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>

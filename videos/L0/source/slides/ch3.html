@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chapter 3 — Why KM Matters to Every Employee</title>
+<link rel="stylesheet" href="../../../../engine/engine.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- S0 chapter card -->
+  <section class="scene" id="S0">
+    <svg class="art" viewBox="0 0 1920 1080">
+      <g class="a" data-at="s+0.3"><circle cx="770" cy="400" r="34" fill="#3D1E6D"/></g>
+      <g class="a" data-at="s+0.35"><circle cx="1150" cy="400" r="34" fill="#1B2F6B"/></g>
+      <polyline class="draw" data-at="s+0.4" data-dur="1.0" points="770,400 960,250 1150,400" fill="none" stroke="#fff" stroke-width="2.5" pathLength="1"/>
+      <g class="a breathe" data-at="s+0.2"><circle cx="960" cy="360" r="78" fill="#E93A3A" filter="url(#glowRed)"/></g>
+      <g class="a" data-at="s+0.4"><circle cx="960" cy="360" r="118" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="4 10" class="spin"/></g>
+      <g class="a" data-at="s+0.45"><text x="960" y="381" text-anchor="middle" class="svgtext" font-size="60">03</text></g>
+      <g class="a" data-at="s+1.0" data-icon="sparkles" data-x="560" data-y="330" data-s="130"></g>
+      <g class="a" data-at="s+1.1" data-icon="sparkles" data-x="1370" data-y="300" data-s="100"></g>
+    </svg>
+    <div class="card-kicker a" data-at="s+0.6">CHAPTER 3</div>
+    <div class="card-title a" data-at="s+0.8">Why KM Matters to Every Employee</div>
+    <div class="card-rule a" data-at="s+1.1" data-kind="scalex"></div>
+  </section>
+
+  <section class="scene" id="S1">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Without KM vs. With KM</h1>
+    <div class="content" id="S1c"><svg class="art" viewBox="0 0 1920 1080" id="S1art"></svg></div>
+  </section>
+
+  <section class="scene" id="S2">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">Every Employee Plays a Role</h1>
+    <div class="content" id="S2c"><svg class="art" viewBox="0 0 1920 1080" id="S2art"></svg></div>
+  </section>
+
+  <section class="scene" id="S3">
+    <h1 class="a" data-at="s+0.1" data-kind="dock">From Individual to Enterprise</h1>
+    <div class="content" id="S3c"><svg class="art" viewBox="0 0 1920 1080" id="S3art"></svg></div>
+  </section>
+
+</div>
+<script src="../../build/timelines/timeline_ch3.js"></script>
+<script src="../../../../engine/engine.js"></script>
+<script>
+const { el, div, node, pill, line, bracket, R, PURPLE, BLUE } = ENGINE;
+const $ = id => document.getElementById(id);
+const stream = (svg, d, at, id) => {
+  el("path", { id, d, fill: "none", stroke: "rgba(255,255,255,.45)", "stroke-width": 2, pathLength: 1, class: "draw", "data-at": at, "data-dur": "0.9" }, svg);
+  el("path", { d, fill: "none", stroke: R, "stroke-width": 4, "stroke-linecap": "round", "stroke-dasharray": "0.04 0.2",
+    pathLength: 1, class: "stream", "data-at": at + "+0.6", filter: "url(#glowSoft)" }, svg);
+};
+
+// ---------- S1: split screen, without KM (dim, dashed) vs with KM (red, solid) ----------
+ENGINE.build(() => {
+  const svg = $("S1art"), html = $("S1c");
+  const top = 394, step = 84, w = 640;
+  const cols = [
+    { x0: 255, at: "s+0.3", rows: ["Searches Multiple Systems", "Questions Are Repeated", "Content Becomes Outdated",
+        "Teams Recreate Work", "Inconsistent AI Answers"], head: "Without KM", icon: "magnifier", u: 0, first: "multiple" },
+    { x0: 1095, at: "u5-0.5", rows: ["Quickly Find Trusted Answers", "Reused Instead of Recreated", "Best Practices Shared Globally",
+        "New Employees Ramp Up Faster", "More Accurate, Trustworthy Results"], head: "With KM", icon: "badge", u: 5, first: "quickly" },
+  ];
+  cols.forEach((c, side) => {
+    const good = side === 1;
+    el("rect", { x: c.x0 - 70, y: 256, width: 740, height: 562, rx: 26, pathLength: 1, class: "draw", "data-at": c.at, "data-dur": "1.0",
+      fill: good ? "rgba(233,58,58,.05)" : "rgba(255,255,255,.02)", stroke: good ? "rgba(233,58,58,.6)" : "rgba(255,255,255,.28)",
+      "stroke-width": good ? 2 : 1.5, "stroke-dasharray": good ? null : "6 8" }, svg);
+    node(svg, html, { x: c.x0 + 45, y: 316, r: 34, fill: good ? R : PURPLE, glow: good, icon: c.icon, iconSize: 44, at: c.at + "+0.1" });
+    div("a", c.head, { position: "absolute", left: (c.x0 + 97) + "px", top: "289px", fontSize: "38px", fontWeight: 600,
+      color: good ? "#fff" : "rgba(255,255,255,.75)" }, html, { at: c.at + "+0.15" });
+    line(svg, { x1: c.x0, y1: 368, x2: c.x0 + w, y2: 368, stroke: good ? R : "rgba(255,255,255,.35)", w: 2, at: c.at + "+0.2" });
+    c.rows.forEach((text, k) => {
+      // first row waits ~1s after the column header so the two don't land together
+      const y = top + k * step, yc = y + 31, mx = c.x0 - 33, at = k ? `u${c.u + k}` : `u${c.u}@${c.first}`;
+      // row marker: x in a dim ring (without) / check on a red dot (with)
+      const g = el("g", { class: "a", "data-at": at }, svg);
+      el("circle", { cx: mx, cy: yc, r: 18, fill: good ? R : "none", stroke: good ? "none" : "rgba(255,255,255,.45)", "stroke-width": 2,
+        filter: good ? "url(#glowDot)" : null }, g);
+      el("path", { d: good ? `M${mx - 8} ${yc}L${mx - 2} ${yc + 6}L${mx + 9} ${yc - 6}` : `M${mx - 6} ${yc - 6}L${mx + 6} ${yc + 6}M${mx + 6} ${yc - 6}L${mx - 6} ${yc + 6}`,
+        fill: "none", stroke: good ? "#fff" : R, "stroke-width": 3.5, "stroke-linecap": "round", "stroke-linejoin": "round" }, g);
+      const p = pill(html, { text, x: c.x0, y, w, sm: true, left: true, red: good && k === 4, at: at + "+0.05" });
+      if (!good) p.dataset.dim = "0.8";
+    });
+  });
+  node(svg, html, { x: 975, y: 560, r: 32, fill: BLUE, text: "VS", textSize: 22, at: "u5-0.6" });
+});
+
+// ---------- S2: not only a small team -> every employee; six everyday actions build collective knowledge ----------
+ENGINE.build(() => {
+  const svg = $("S2art"), html = $("S2c"), hub = [980, 540];
+  // a small team owns it ... hands over to every employee
+  el("circle", { cx: hub[0], cy: hub[1], r: 110, fill: "none", stroke: "rgba(233,58,58,.7)", "stroke-width": 2, "stroke-dasharray": "5 9", class: "spin" },
+     el("g", { class: "a", "data-at": "u10@small", "data-out": "u11" }, svg));
+  node(svg, html, { x: hub[0], y: hub[1], r: 80, fill: PURPLE, opacity: 0.7, icon: "team", iconSize: 90, at: "u10@small", out: "u11",
+    label: "Not Only a Small Team", labelGap: 44 });
+  const acts = [["doc", "Create a Document", 650, 330, "above"], ["share", "Share an Insight", 1310, 330, "above"],
+                ["reuse", "Update a Process", 1440, 560, "below"], ["chat", "Answer a Question", 1310, 790, "below"],
+                ["layers", "Maintain Content", 650, 790, "below"], ["headbulb", "Contribute Expertise", 520, 560, "below"]];
+  acts.forEach(([, , x, y], k) => {
+    el("path", { id: `S2in${k}`, d: `M${x} ${y} L ${hub[0]} ${hub[1]}`, fill: "none", stroke: "none" }, svg);
+    line(svg, { x1: hub[0], y1: hub[1], x2: x, y2: y, at: `u${13 + k}-0.1`, w: 2, stroke: "rgba(255,255,255,.55)" });
+  });
+  // outer ring linking every contribution together
+  el("path", { d: "M650 330 L 1310 330 L 1440 560 L 1310 790 L 650 790 L 520 560 Z", fill: "none", stroke: "rgba(233,58,58,.6)", "stroke-width": 2,
+    "stroke-dasharray": "0.012 0.008", pathLength: 1, class: "draw", "data-at": "u19@build", "data-dur": "1.2" }, svg);
+  el("circle", { cx: hub[0], cy: hub[1], r: 130, fill: "none", stroke: "rgba(255,255,255,.3)", "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" },
+     el("g", { class: "a", "data-at": "u11" }, svg));
+  node(svg, html, { x: hub[0], y: hub[1], r: 95, fill: R, glow: true, breathe: true, icon: "person", iconSize: 105, at: "u11", out: "u19@collective",
+    label: "Every Lenovo Employee", labelAt: "u11@employee", labelOut: "u19@collective" });
+  el("circle", { cx: hub[0], cy: hub[1], r: 95, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": 95, "data-at": "u12" }, svg);
+  acts.forEach(([icon, label, x, y, pos], k) => node(svg, html, { x, y, r: 50, fill: k % 2 ? BLUE : PURPLE, icon, iconSize: 56, label, labelPos: pos, at: `u${13 + k}` }));
+  // every contribution flows into the hub, which becomes Lenovo's collective knowledge
+  acts.forEach((a, k) => el("circle", { cx: 0, cy: 0, r: 8, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": `S2in${k}`,
+    "data-at": `u19@helping+${(k * 0.12).toFixed(2)}`, "data-dur": "0.9" }, svg));
+  node(svg, html, { x: hub[0], y: hub[1], r: 95, fill: R, glow: true, breathe: true, icon: "network", iconSize: 110, at: "u19@collective" });
+  el("circle", { cx: hub[0], cy: hub[1], r: 95, fill: "none", stroke: R, "stroke-width": 2, class: "pulse", "data-r0": 95, "data-at": "u19@collective", "data-dur": "1.0" }, svg);
+  pill(html, { text: "Lenovo's Collective Knowledge", x: hub[0] - 235, y: 655, w: 470, sm: true, red: true, at: "u19@knowledge" });
+});
+
+// ---------- S3: one document, reused by others -> hundreds / thousands of decisions -> enterprise value ----------
+ENGINE.build(() => {
+  const svg = $("S3art"), html = $("S3c"), doc = [420, 560];
+  el("circle", { cx: doc[0], cy: doc[1], r: 115, fill: "none", stroke: "rgba(255,255,255,.35)", "stroke-width": 2, "stroke-dasharray": "4 10", class: "spin" },
+     el("g", { class: "a", "data-at": "u20@reused" }, svg));
+  node(svg, html, { x: doc[0], y: doc[1], r: 85, fill: R, glow: true, breathe: true, icon: "doc", iconSize: 95, at: "u20",
+    label: "Reused by Others", labelPos: "above", labelAt: "u20@reused", labelGap: 44 });
+  div("nlabel a", "Created Once", { left: doc[0] + "px", top: (doc[1] + 85 + 44) + "px" }, html, { at: "u21@created", out: "u22@individual-0.3" });
+  div("nlabel a", "Individual Knowledge", { left: doc[0] + "px", top: (doc[1] + 85 + 44) + "px" }, html, { at: "u22@individual" });
+  // the gate: organized, governed, accessible
+  const top = 434, step = 84;
+  line(svg, { x1: doc[0] + 125, y1: doc[1], x2: 650, y2: doc[1], at: "u21@organized-0.3", w: 2 });
+  bracket(svg, { x: 660, y1: top, y2: top + step * 2 + 62, at: "u21@organized-0.2" });
+  [["Organized", "organized"], ["Governed", "governed"], ["Accessible", "accessible"]].forEach(([text, w], k) =>
+    pill(html, { text, x: 680, y: top + k * step, w: 250, sm: true, at: `u21@${w}` }));
+  stream(svg, `M945 ${doc[1]} L 1075 ${doc[1]}`, "u21@support");
+  // the decisions field: hundreds, then thousands of dots light up
+  let seed = 7;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const dots = [];
+  for (let r = 0; r < 8; r++) for (let c = 0; c < 12; c++) dots.push([1100 + c * 60, 330 + r * 60, rnd()]);
+  dots.sort((a, b) => a[2] - b[2]).forEach(([x, y], k) => {
+    const first = k < 38, at = first ? `u21@hundreds+${(k * 0.025).toFixed(3)}` : `u21@thousands+${((k - 38) * 0.012).toFixed(3)}`;
+    el("circle", { cx: x, cy: y, r: k % 7 === 0 ? 9 : 6, fill: k % 7 === 0 ? R : "rgba(255,255,255,.85)", filter: "url(#glowDot)",
+      class: "a", "data-at": at, "data-dur": "0.35" }, svg);
+  });
+  div("nlabel a", "Hundreds or Thousands of Future Decisions", { left: "1430px", top: "790px" }, html, { at: "u21@decisions", out: "u22@enterprise-0.3" });
+  pill(html, { text: "Enterprise Value", x: 1430 - 170, y: 778, w: 340, sm: true, red: true, at: "u22@enterprise" });
+  // individual knowledge -> enterprise value
+  const arc = "M500 495 C 700 215, 1180 190, 1420 285";
+  el("path", { id: "S3arc", d: arc, fill: "none", stroke: R, "stroke-width": 3, "stroke-linecap": "round", pathLength: 1, class: "draw",
+    "data-at": "u22@transform", "data-dur": "1.2", filter: "url(#glowSoft)" }, svg);
+  el("circle", { cx: 0, cy: 0, r: 9, fill: "#fff", filter: "url(#glowDot)", class: "travel", "data-path": "S3arc", "data-at": "u22@transform+0.4", "data-dur": "1.1" }, svg);
+});
+
+ENGINE.start();
+</script>
+</body>
+</html>
